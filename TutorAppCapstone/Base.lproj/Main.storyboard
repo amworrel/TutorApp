@@ -143,10 +143,10 @@
                                     <segue destination="BEo-IO-hFg" kind="show" id="yEg-Jf-fdE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WK8-8b-fCA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WK8-8b-fCA">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="92" width="139" height="123"/>
+                                    <rect key="frame" x="9" y="94" width="139" height="123"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -433,12 +433,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c53-Tr-NBv">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="90" width="120" height="117"/>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avB-Kg-nx0">
                                 <rect key="frame" x="171" y="527" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
@@ -451,20 +445,26 @@
                                     <segue destination="BEo-IO-hFg" kind="show" id="szs-st-Zt9"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FLA-TP-6ZE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="90" width="129" height="125"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="z0Y-Lg-IaO"/>
                                 <exclude reference="3eF-Jz-uGr"/>
-                                <exclude reference="c53-Tr-NBv"/>
+                                <exclude reference="FLA-TP-6ZE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="z0Y-Lg-IaO"/>
                                 <include reference="3eF-Jz-uGr"/>
-                                <include reference="c53-Tr-NBv"/>
+                                <include reference="FLA-TP-6ZE"/>
                             </mask>
                         </variation>
                     </view>
@@ -722,7 +722,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hnb-dn-UYZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Hnb-dn-UYZ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="7" y="99" width="139" height="127"/>
@@ -1021,7 +1021,7 @@
                                     <rect key="frame" x="245" y="145" width="97" height="30"/>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-Gx-B18">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wQQ-Gx-B18">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="7" y="91" width="126" height="123"/>
@@ -1163,7 +1163,7 @@
                                     <rect key="frame" x="218" y="166" width="33" height="21"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e5X-rS-0fw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e5X-rS-0fw">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="136" width="135" height="123"/>
@@ -2049,13 +2049,13 @@
                                     <rect key="frame" x="247" y="446" width="86" height="22"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-EK-pUO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-EK-pUO">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="105" width="143" height="123"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rkO-Ag-uBS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rkO-Ag-uBS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="230" y="105" width="125" height="123"/>
@@ -2234,7 +2234,7 @@
                                     <rect key="frame" x="248" y="451" width="30" height="30"/>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-Mm-03h">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-Mm-03h">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="22" y="72" width="127" height="128"/>
@@ -2731,7 +2731,7 @@
                                     <rect key="frame" x="296" y="523" width="62" height="30"/>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-jt-KJ1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-jt-KJ1">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="87" width="132" height="132"/>
@@ -2811,12 +2811,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="429-Pz-sKM">
-                                <rect key="frame" x="124" y="110" width="130" height="130"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="94" width="130" height="130"/>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutor Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0r-aE-4Tf">
                                 <rect key="frame" x="145" y="248" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2885,10 +2879,16 @@
                                     <rect key="frame" x="0.0" y="20" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NMC-headshots_blog_1D3_7785.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-HF-b4E">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j7Q-HF-b4E">
                                 <rect key="frame" x="346" y="110" width="130" height="130"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="254" y="94" width="130" height="130"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="429-Pz-sKM">
+                                <rect key="frame" x="124" y="110" width="130" height="130"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="94" width="130" height="130"/>
                                 </variation>
                             </imageView>
                         </subviews>
@@ -3333,13 +3333,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Headshot.jpg" width="800" height="533"/>
         <image name="NMC-headshots_blog_1D3_7785.jpg" width="800" height="533"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="szs-st-Zt9"/>
-        <segue reference="hUx-et-4vB"/>
-        <segue reference="BuY-Av-JYr"/>
+        <segue reference="mpV-D3-Vvf"/>
         <segue reference="MwI-gb-Lfm"/>
-        <segue reference="sAZ-Lf-cQ3"/>
+        <segue reference="yEg-Jf-fdE"/>
+        <segue reference="BuY-Av-JYr"/>
+        <segue reference="GNA-TC-fOV"/>
     </inferredMetricsTieBreakers>
 </document>
