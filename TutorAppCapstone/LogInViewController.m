@@ -8,6 +8,7 @@
 
 #import "LogInViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "SelectionViewController.h"
 
 
 @interface ViewController ()
@@ -20,6 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.loginView.readPermissions = @[@"pulic_profile"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +30,7 @@
 }
 
 -(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
+    
     NSLog(@"%@", user.name);
 }
 
@@ -39,6 +42,10 @@
 -(void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView
 {
     NSLog(@"You are logged out!");
+}
+
+-(void)showSelectionScreen {
+    [self performSegueWithIdentifier:@"LogInSegue" sender:self];
 }
 
 -(void)loginView:(FBLoginView *)loginView handleError:(NSError *)error

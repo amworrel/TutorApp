@@ -145,13 +145,25 @@
                                     <rect key="frame" x="26" y="290" width="348" height="20"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-yW-EPU">
+                                <rect key="frame" x="269" y="513" width="71" height="30"/>
+                                <state key="normal" title="Continue..">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BEo-IO-hFg" kind="show" id="a4z-GT-qJC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="BEo-IO-hFg" kind="show" identifier="LogInSegue" id="xfb-0G-ClX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQb-fK-e0v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-312" y="1012"/>
+            <point key="canvasLocation" x="-238" y="1004"/>
         </scene>
         <!--Tutor Create View Controller-->
         <scene sceneID="WNs-Qu-hqz">
@@ -396,7 +408,7 @@
                         <viewControllerLayoutGuide type="top" id="YlK-Jy-9Sd"/>
                         <viewControllerLayoutGuide type="bottom" id="xHE-SI-t1j"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wEd-z0-9pV">
+                    <view key="view" contentMode="scaleToFill" id="wEd-z0-9pV" customClass="SelectionView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -2049,7 +2061,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3Rg-4D-FYC"/>
+        <segue reference="xfb-0G-ClX"/>
         <segue reference="r2i-HZ-u51"/>
         <segue reference="sAZ-Lf-cQ3"/>
     </inferredMetricsTieBreakers>
