@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Worrell, Amy Marie. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LogInViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 

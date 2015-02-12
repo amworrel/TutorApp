@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Student Create View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StudentCreateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="-312" y="1012"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutor Create View Controller-->
         <scene sceneID="WNs-Qu-hqz">
             <objects>
-                <viewController id="CdH-a2-0mr" sceneMemberID="viewController">
+                <viewController id="CdH-a2-0mr" customClass="TutorCreateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y58-18-b3k"/>
                         <viewControllerLayoutGuide type="bottom" id="hes-IO-IlS"/>
@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="1191" y="1011.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutor Home View Controller-->
         <scene sceneID="xMa-s6-Fce">
             <objects>
-                <viewController id="djO-DV-8rc" sceneMemberID="viewController">
+                <viewController id="djO-DV-8rc" customClass="TutorHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UQU-zm-NXd"/>
                         <viewControllerLayoutGuide type="bottom" id="ceI-Do-EzJ"/>
@@ -388,10 +388,10 @@
             </objects>
             <point key="canvasLocation" x="1819" y="1011"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="6n6-a3-9qJ">
             <objects>
-                <viewController id="BEo-IO-hFg" sceneMemberID="viewController">
+                <viewController id="BEo-IO-hFg" customClass="SelectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YlK-Jy-9Sd"/>
                         <viewControllerLayoutGuide type="bottom" id="xHE-SI-t1j"/>
@@ -608,10 +608,10 @@
             </objects>
             <point key="canvasLocation" x="1705" y="309"/>
         </scene>
-        <!--View Controller-->
+        <!--Student Home View Controller-->
         <scene sceneID="GnL-Hh-3bw">
             <objects>
-                <viewController id="caa-hd-9eF" sceneMemberID="viewController">
+                <viewController id="caa-hd-9eF" customClass="StudentHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Mm-Ex-A7z"/>
                         <viewControllerLayoutGuide type="bottom" id="caQ-QU-Xog"/>
@@ -2049,8 +2049,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mpV-D3-Vvf"/>
-        <segue reference="vty-AB-Kqw"/>
-        <segue reference="UZy-4Z-ulV"/>
+        <segue reference="3Rg-4D-FYC"/>
+        <segue reference="r2i-HZ-u51"/>
+        <segue reference="sAZ-Lf-cQ3"/>
     </inferredMetricsTieBreakers>
 </document>
