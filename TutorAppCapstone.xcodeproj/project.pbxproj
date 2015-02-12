@@ -14,7 +14,7 @@
 		B4617C591A7AECA9001D2818 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4617C581A7AECA9001D2818 /* Images.xcassets */; };
 		B4617C5C1A7AECA9001D2818 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */; };
 		B4617C681A7AECA9001D2818 /* TutorAppCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C671A7AECA9001D2818 /* TutorAppCapstoneTests.m */; };
-		B4BCFC471A880EF800A90A09 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BCFC461A880EF800A90A09 /* FacebookSDK.framework */; };
+		B49B47001A8D436800A11413 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49B46FF1A8D436800A11413 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		B4617C611A7AECA9001D2818 /* TutorAppCapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorAppCapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4617C661A7AECA9001D2818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4617C671A7AECA9001D2818 /* TutorAppCapstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorAppCapstoneTests.m; sourceTree = "<group>"; };
-		B4BCFC461A880EF800A90A09 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		B49B46FF1A8D436800A11413 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = TutorAppCapstone/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4BCFC471A880EF800A90A09 /* FacebookSDK.framework in Frameworks */,
+				B49B47001A8D436800A11413 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,10 +66,10 @@
 		B4617C3F1A7AECA9001D2818 = {
 			isa = PBXGroup;
 			children = (
+				B49B46FF1A8D436800A11413 /* FacebookSDK.framework */,
 				B4617C4A1A7AECA9001D2818 /* TutorAppCapstone */,
 				B4617C641A7AECA9001D2818 /* TutorAppCapstoneTests */,
 				B4617C491A7AECA9001D2818 /* Products */,
-				B4BCFC461A880EF800A90A09 /* FacebookSDK.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,6 +352,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/amworrel/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/TutorAppCapstone",
 				);
 				INFOPLIST_FILE = TutorAppCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -366,6 +367,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/amworrel/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/TutorAppCapstone",
 				);
 				INFOPLIST_FILE = TutorAppCapstone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
