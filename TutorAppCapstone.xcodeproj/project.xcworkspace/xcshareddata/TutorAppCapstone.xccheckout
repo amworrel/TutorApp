@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A9B10F56-43F4-4198-A6D4-0F02F8A3D30C</string>
+	<string>550DF226-E6D1-41AC-B862-4A2765A217BA</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TutorAppCapstone</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>560CE92FADA671FA1BCFA83904DD8E52FA86140E</string>
 			<key>IDESourceControlWCCName</key>
-			<string>chazSegues</string>
+			<string>TutorApp</string>
 		</dict>
 	</array>
 </dict>
