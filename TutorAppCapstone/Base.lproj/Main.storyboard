@@ -381,7 +381,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TutorMe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHH-4I-iNv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TutorMe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHH-4I-iNv">
                                 <rect key="frame" x="269" y="251" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -390,16 +390,7 @@
                                     <rect key="frame" x="168" y="249" width="64" height="20"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Log-in with Facebook or LinkedIn to continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBB-0t-wBt">
-                                <rect key="frame" x="126" y="289" width="348" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="290" width="348" height="20"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ3-UG-T3S">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJ3-UG-T3S">
                                 <rect key="frame" x="157" y="408" width="68" height="30"/>
                                 <state key="normal" title="Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -411,7 +402,7 @@
                                     <segue destination="bBe-lL-leU" kind="show" id="nha-2D-Vhf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdF-eS-ZDc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdF-eS-ZDc">
                                 <rect key="frame" x="378" y="408" width="59" height="30"/>
                                 <state key="normal" title="LinkedIn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -423,6 +414,18 @@
                                     <segue destination="bBe-lL-leU" kind="show" id="Sd6-AA-GUa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log-in with Facebook or LinkedIn to continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBB-0t-wBt">
+                                <rect key="frame" x="126" y="289" width="348" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="290" width="348" height="20"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="300" width="348" height="20"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -590,8 +593,7 @@
                                         <exclude reference="ytm-YL-xdv"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="107" y="193" width="35" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="DwD-iO-iac"/>
                                         <include reference="ytm-YL-xdv"/>
@@ -606,9 +608,6 @@
                                 <state key="normal" title="Student">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="225" y="193" width="54" height="30"/>
-                                </variation>
                                 <connections>
                                     <segue destination="LLk-Oe-GDX" kind="show" id="03R-SN-fZl"/>
                                 </connections>
@@ -1822,7 +1821,8 @@
                                         <exclude reference="4FE-eN-rQc"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="364" y="205" width="76" height="20"/>
                                     <mask key="constraints">
                                         <include reference="4FE-eN-rQc"/>
                                     </mask>
@@ -1858,7 +1858,8 @@
                                         <exclude reference="gxM-Nv-QX1"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="364" y="166" width="36" height="20"/>
                                     <mask key="constraints">
                                         <include reference="gxM-Nv-QX1"/>
                                     </mask>
@@ -1889,6 +1890,9 @@
                                 <state key="normal" title="View All">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="375" y="572" width="54" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="wSL-jo-RSX" kind="show" id="3V5-vZ-JYc"/>
                                 </connections>
@@ -3657,7 +3661,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="7" width="134" height="24"/>
+                                    <rect key="frame" x="22" y="207" width="134" height="24"/>
                                     <mask key="constraints">
                                         <include reference="nRb-Ft-lSb"/>
                                         <include reference="xfB-Bd-8m5"/>
@@ -3680,7 +3684,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="42" width="72" height="22"/>
+                                    <rect key="frame" x="22" y="242" width="72" height="22"/>
                                     <mask key="constraints">
                                         <include reference="Jzw-sl-KWB"/>
                                         <include reference="yyA-he-f4s"/>
@@ -3712,7 +3716,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="102" width="68" height="28"/>
+                                    <rect key="frame" x="22" y="302" width="68" height="28"/>
                                     <mask key="constraints">
                                         <include reference="CSs-hw-oQ7"/>
                                         <include reference="fgw-hb-hVl"/>
@@ -3735,7 +3739,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="138" width="70" height="28"/>
+                                    <rect key="frame" x="22" y="338" width="70" height="28"/>
                                     <mask key="constraints">
                                         <include reference="4gq-yf-hne"/>
                                         <include reference="vK5-x8-xbL"/>
@@ -3747,9 +3751,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="205" width="310" height="24"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="11/13/14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYZ-J2-Xgw">
                                 <rect key="frame" x="358" y="312" width="105" height="24"/>
@@ -3774,7 +3775,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="69" width="330" height="26"/>
+                                    <rect key="frame" x="220" y="269" width="130" height="26"/>
                                     <mask key="constraints">
                                         <include reference="7Gr-PZ-8NE"/>
                                     </mask>
@@ -3786,7 +3787,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="102" width="304" height="24"/>
+                                    <rect key="frame" x="220" y="302" width="104" height="24"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Meet in lobby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLa-em-NYa">
@@ -3803,7 +3804,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="138" width="358" height="26"/>
+                                    <rect key="frame" x="220" y="338" width="158" height="26"/>
                                     <mask key="constraints">
                                         <include reference="6GN-0w-a0u"/>
                                     </mask>
@@ -3835,7 +3836,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="173" width="32" height="21"/>
+                                    <rect key="frame" x="22" y="373" width="32" height="21"/>
                                     <mask key="constraints">
                                         <include reference="UUh-eh-8qO"/>
                                     </mask>
@@ -3847,7 +3848,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="220" y="173" width="86" height="21"/>
+                                    <rect key="frame" x="220" y="373" width="86" height="21"/>
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Headshot.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-Mm-03h">
@@ -4257,7 +4258,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="156" width="568" height="300"/>
+                                    <rect key="frame" x="16" y="-44" width="568" height="300"/>
                                     <mask key="constraints">
                                         <include reference="Zps-za-1kB"/>
                                     </mask>
@@ -4275,7 +4276,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="16" y="-74" width="568" height="150"/>
+                                    <rect key="frame" x="16" y="-274" width="568" height="150"/>
                                     <mask key="constraints">
                                         <include reference="aEU-8p-SJy"/>
                                     </mask>
@@ -4297,7 +4298,7 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="185" y="477" width="51" height="30"/>
+                                    <rect key="frame" x="185" y="277" width="51" height="30"/>
                                     <mask key="constraints">
                                         <include reference="4qI-Mv-TR8"/>
                                         <include reference="nXP-ih-8Pw"/>
@@ -5365,8 +5366,7 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="317" y="468" width="164" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="168" y="424" width="164" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="7f2-2k-e1i"/>
                                         <include reference="Ack-VC-0uH"/>
@@ -5388,8 +5388,7 @@
                                         <exclude reference="TvL-3m-DUG"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="108" y="541" width="48" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="1t1-B1-N3U"/>
                                         <include reference="TvL-3m-DUG"/>
@@ -5414,8 +5413,7 @@
                                         <exclude reference="foE-oY-GGk"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="243" y="541" width="49" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="6ip-8k-lBq"/>
                                         <include reference="foE-oY-GGk"/>
