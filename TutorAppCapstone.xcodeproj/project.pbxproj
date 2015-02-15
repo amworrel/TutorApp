@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
+		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
 		B4617C4E1A7AECA9001D2818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C4D1A7AECA9001D2818 /* main.m */; };
 		B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C501A7AECA9001D2818 /* AppDelegate.m */; };
 		B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C531A7AECA9001D2818 /* LogInViewController.m */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = ../../Student.jpg; sourceTree = "<group>"; };
+		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = ../../Tutor.jpg; sourceTree = "<group>"; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4617C4C1A7AECA9001D2818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4617C4D1A7AECA9001D2818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21DB73B11A9155F50062E9A9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				21DB73B41A9156090062E9A9 /* Tutor.jpg */,
+				21DB73B21A9156030062E9A9 /* Student.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		B4617C3F1A7AECA9001D2818 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		B4617C4B1A7AECA9001D2818 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				21DB73B11A9155F50062E9A9 /* Images */,
 				B4617C4C1A7AECA9001D2818 /* Info.plist */,
 				B4617C4D1A7AECA9001D2818 /* main.m */,
 			);
@@ -228,7 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */,
 				B4617C571A7AECA9001D2818 /* Main.storyboard in Resources */,
+				21DB73B31A9156030062E9A9 /* Student.jpg in Resources */,
 				B4617C5C1A7AECA9001D2818 /* LaunchScreen.xib in Resources */,
 				B4617C591A7AECA9001D2818 /* Images.xcassets in Resources */,
 			);
