@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = ../Student.jpg; sourceTree = SOURCE_ROOT; };
-		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = ../Tutor.jpg; sourceTree = SOURCE_ROOT; };
+		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
+		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4617C4C1A7AECA9001D2818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4617C4D1A7AECA9001D2818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
