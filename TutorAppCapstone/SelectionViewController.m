@@ -7,6 +7,7 @@
 //
 
 #import "SelectionViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface SelectionViewController ()
 

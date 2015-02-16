@@ -29,8 +29,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 -(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
     
+    self.profilePictureView.profileID = user.id;
+    SelectionViewController.FBnameLabel.text = user.name;
     NSLog(@"%@", user.name);
 }
 
