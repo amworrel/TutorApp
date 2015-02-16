@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.loginView.readPermissions = @[@"pulic_profile"];
+    self.loginView.readPermissions = @[@"public_profile"];
     
 }
 
