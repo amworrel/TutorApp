@@ -437,6 +437,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BEo-IO-hFg" kind="show" id="JKj-cw-oEg"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-lk-1T0">
                                 <rect key="frame" x="270" y="141" width="97" height="30"/>
@@ -4920,10 +4923,10 @@
         <segue reference="sAZ-Lf-cQ3"/>
         <segue reference="IL7-Hv-B4h"/>
         <segue reference="8q0-Az-do6"/>
-        <segue reference="h4f-pB-MsY"/>
-        <segue reference="4hm-Fc-7nq"/>
+        <segue reference="0Yg-3Y-Nsw"/>
+        <segue reference="JKj-cw-oEg"/>
         <segue reference="CAM-Y4-VC6"/>
+        <segue reference="4hm-Fc-7nq"/>
         <segue reference="BqC-mZ-mge"/>
-        <segue reference="nV4-iP-TSm"/>
     </inferredMetricsTieBreakers>
 </document>
