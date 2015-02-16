@@ -22,13 +22,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sW6-pi-Pbe">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Create Profile Student" id="nfd-CC-ksh">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="uR8-rj-3BM">
-                                            <connections>
-                                                <segue destination="BEo-IO-hFg" kind="show" id="XJM-eB-1D7"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Create Profile Student" id="nfd-CC-ksh"/>
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-77" y="20" width="600" height="44"/>
@@ -69,6 +63,15 @@
                                     <rect key="frame" x="288" y="141" width="96" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-FG-gzF">
+                                <rect key="frame" x="100" y="345" width="64" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="28" y="371" width="64" height="20"/>
+                                </variation>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abE-Ox-MOh">
                                 <rect key="frame" x="100" y="288" width="40" height="20"/>
                                 <constraints>
@@ -144,20 +147,21 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-FG-gzF">
-                                <rect key="frame" x="100" y="345" width="64" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="28" y="371" width="64" height="20"/>
-                                </variation>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-36-QJc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BEo-IO-hFg" kind="show" id="nV4-iP-TSm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sW6-pi-Pbe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="10I-S8-DjY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9ka-hT-Kzi" secondAttribute="trailing" constant="17" id="1Vz-SW-tcz"/>
+                            <constraint firstItem="Llg-36-QJc" firstAttribute="baseline" secondItem="IYb-yD-cEO" secondAttribute="baseline" id="23e-Wm-hTh"/>
                             <constraint firstItem="RGt-Fn-oTf" firstAttribute="baseline" secondItem="Nlb-LZ-aqC" secondAttribute="firstBaseline" id="3Fs-xH-Ek7"/>
                             <constraint firstItem="fYY-0P-gCH" firstAttribute="leading" secondItem="cgB-FG-gzF" secondAttribute="trailing" constant="75" id="618-Qh-uIe"/>
                             <constraint firstItem="IYb-yD-cEO" firstAttribute="top" secondItem="fYY-0P-gCH" secondAttribute="bottom" constant="66" id="8dl-5h-gfB"/>
@@ -176,11 +180,14 @@
                             <constraint firstItem="fYY-0P-gCH" firstAttribute="leading" secondItem="Dh3-Kr-meu" secondAttribute="leading" id="iLL-RV-cRS"/>
                             <constraint firstItem="fYY-0P-gCH" firstAttribute="trailing" secondItem="Dh3-Kr-meu" secondAttribute="trailing" id="iNp-q2-SjC"/>
                             <constraint firstItem="D4b-UE-m2B" firstAttribute="top" secondItem="sW6-pi-Pbe" secondAttribute="bottom" constant="31" id="ifq-Fg-HaG"/>
+                            <constraint firstItem="IYb-yD-cEO" firstAttribute="leading" secondItem="Llg-36-QJc" secondAttribute="trailing" constant="50" id="n0f-rE-8c5"/>
                             <constraint firstItem="fYY-0P-gCH" firstAttribute="leading" secondItem="eQ3-rk-gW1" secondAttribute="leading" id="nUO-Oc-O6R"/>
                             <constraint firstItem="abE-Ox-MOh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="318" id="r9h-K5-ria"/>
                             <constraint firstItem="RGt-Fn-oTf" firstAttribute="leading" secondItem="Nlb-LZ-aqC" secondAttribute="trailing" constant="32" id="rKh-nt-Ecn"/>
                             <constraint firstItem="Dh3-Kr-meu" firstAttribute="baseline" secondItem="abE-Ox-MOh" secondAttribute="firstBaseline" id="t3Q-oq-D0M"/>
-                            <constraint firstItem="sW6-pi-Pbe" firstAttribute="centerX" secondItem="IYb-yD-cEO" secondAttribute="centerX" id="tMS-iy-lmZ"/>
+                            <constraint firstItem="sW6-pi-Pbe" firstAttribute="centerX" secondItem="IYb-yD-cEO" secondAttribute="centerX" id="tMS-iy-lmZ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-45.5"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="sW6-pi-Pbe" secondAttribute="trailing" id="upR-NR-RAj"/>
                             <constraint firstItem="cgB-FG-gzF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="vQg-PH-DYA"/>
                             <constraint firstItem="fYY-0P-gCH" firstAttribute="centerY" secondItem="cgB-FG-gzF" secondAttribute="centerY" id="vrB-jk-dDr"/>
@@ -190,6 +197,7 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="D4b-UE-m2B"/>
+                                <exclude reference="Llg-36-QJc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="10I-S8-DjY"/>
@@ -221,12 +229,15 @@
                                 <exclude reference="iNp-q2-SjC"/>
                                 <exclude reference="nUO-Oc-O6R"/>
                                 <exclude reference="vrB-jk-dDr"/>
+                                <exclude reference="23e-Wm-hTh"/>
                                 <exclude reference="8dl-5h-gfB"/>
+                                <exclude reference="n0f-rE-8c5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="D4b-UE-m2B"/>
+                                <include reference="Llg-36-QJc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="10I-S8-DjY"/>
@@ -258,7 +269,9 @@
                                 <include reference="iNp-q2-SjC"/>
                                 <include reference="nUO-Oc-O6R"/>
                                 <include reference="vrB-jk-dDr"/>
+                                <include reference="23e-Wm-hTh"/>
                                 <include reference="8dl-5h-gfB"/>
+                                <include reference="n0f-rE-8c5"/>
                             </mask>
                         </variation>
                     </view>
@@ -340,11 +353,6 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Create Profile Tutor" id="hOb-HN-LHf">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="BGP-hj-eHE">
-                                            <connections>
-                                                <segue destination="BEo-IO-hFg" kind="show" id="3Rg-4D-FYC"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" id="8ck-s7-Pdo"/>
                                     </navigationItem>
                                 </items>
@@ -685,7 +693,6 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Tutor Homepage" id="qy0-R2-nrq">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="gLc-Vm-srH"/>
                                         <barButtonItem key="rightBarButtonItem" title="Menu" id="EQo-oW-A9H">
                                             <connections>
                                                 <segue destination="KSb-jt-gL6" kind="show" id="0mq-1T-MCH"/>
@@ -1210,18 +1217,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AnA-tg-0IG">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Update Profile" id="Rga-k9-niD">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="YMS-Rk-wti">
-                                            <connections>
-                                                <segue destination="caa-hd-9eF" kind="show" id="JJb-Qw-Sdu"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="rfD-ex-Lmb">
-                                            <connections>
-                                                <segue destination="caa-hd-9eF" kind="show" id="Dg1-xm-2vQ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Update Profile" id="Rga-k9-niD"/>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-ud-xcD">
@@ -1483,11 +1479,6 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Student Home Screen" id="TwF-Ky-mGJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="jQV-hv-Wjg">
-                                            <connections>
-                                                <segue destination="BEo-IO-hFg" kind="show" id="UZy-4Z-ulV"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Menu" id="vMp-hL-T4Q">
                                             <connections>
                                                 <segue destination="M9D-7X-8HN" kind="show" id="rcI-SN-pCI"/>
@@ -1786,7 +1777,6 @@
                                 <items>
                                     <navigationItem title="Search" id="IjD-0r-gwU">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="CsR-7A-N2s"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="Q3T-UT-5nJ"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2266,11 +2256,6 @@
                                                 <segue destination="caa-hd-9eF" kind="show" id="vty-AB-Kqw"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="2VB-sW-OLO">
-                                            <connections>
-                                                <segue destination="caa-hd-9eF" kind="show" id="EWi-6U-l40"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2427,11 +2412,6 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="etd-mm-jtd">
                                             <connections>
                                                 <segue destination="djO-DV-8rc" kind="show" id="m0k-iJ-DY9"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="DQE-WQ-Xa2">
-                                            <connections>
-                                                <segue destination="djO-DV-8rc" kind="show" id="dqu-nK-s7W"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -3292,11 +3272,6 @@
                                                 <segue destination="djO-DV-8rc" kind="show" id="h4f-pB-MsY"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="sWy-hg-f0s">
-                                            <connections>
-                                                <segue destination="djO-DV-8rc" kind="show" id="gRD-NF-bfY"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -4062,18 +4037,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-J0-tP6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Review" id="rTc-aV-fNQ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="ZnC-uk-aCT">
-                                            <connections>
-                                                <segue destination="Lka-Pt-lEr" kind="show" id="aZk-Mq-qw4"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="dpT-3e-E2o">
-                                            <connections>
-                                                <segue destination="caa-hd-9eF" kind="show" id="cdY-uk-n3a"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Review" id="rTc-aV-fNQ"/>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SWU-vT-6sa">
@@ -4719,18 +4683,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="keG-xi-Jru">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Update Profile" id="xsb-Mf-TDx">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="7u0-8z-hzm">
-                                            <connections>
-                                                <segue destination="djO-DV-8rc" kind="show" id="Ibp-Ms-BRX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Home" id="TFm-XV-saK">
-                                            <connections>
-                                                <segue destination="djO-DV-8rc" kind="show" id="fY0-f5-4FP"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Update Profile" id="xsb-Mf-TDx"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaL-Ra-Kfs">
@@ -4963,14 +4916,14 @@
         <image name="Tutor.jpg" width="800" height="533"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Brb-5W-cdl"/>
-        <segue reference="s6K-3L-618"/>
-        <segue reference="H23-1a-bea"/>
-        <segue reference="QmE-fB-rAf"/>
-        <segue reference="m0k-iJ-DY9"/>
-        <segue reference="CAM-Y4-VC6"/>
+        <segue reference="vty-AB-Kqw"/>
+        <segue reference="sAZ-Lf-cQ3"/>
+        <segue reference="IL7-Hv-B4h"/>
+        <segue reference="8q0-Az-do6"/>
+        <segue reference="h4f-pB-MsY"/>
         <segue reference="4hm-Fc-7nq"/>
+        <segue reference="CAM-Y4-VC6"/>
         <segue reference="BqC-mZ-mge"/>
-        <segue reference="52Z-tS-Izn"/>
+        <segue reference="nV4-iP-TSm"/>
     </inferredMetricsTieBreakers>
 </document>
