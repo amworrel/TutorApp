@@ -10,6 +10,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 
+
+
 @interface TutorHomeViewController ()
 
 @end
@@ -20,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info", nil];
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:YES
@@ -35,13 +37,18 @@
         NSLog(@"%@", [result objectForKey:@"last_name"]);
         NSLog(@"%@", [result objectForKey:@"birthday"]);
         NSLog(@"%@", [result objectForKey:@"email"]);
+        NSLog(@"%@", [result objectForKey:@"picture"]);
         
         self.firstName.text = [result objectForKey:@"first_name"];
         self.lastName.text = [result objectForKey:@"last_name"];
+        //self.picture.pictureCropping = [result objectForKey:@"picture"];
+        
+        self.picture.profileID= [result objectForKey:@"picture"];
+        
         
     }];
     
-    
+    //self.picture.profileID = user.id;
     
     
 }
