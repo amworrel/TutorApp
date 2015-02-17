@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface StudentCreateViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *studentFirstName;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *studentLastName;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *studentUniversity;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *studentYear;
+@property (weak, nonatomic) IBOutlet UITextField *studentMajor;
+
+
 
 @end
