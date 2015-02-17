@@ -10,4 +10,10 @@
 
 @interface TutorHomeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lastName;
+
+
+
 @end
