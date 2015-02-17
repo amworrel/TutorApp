@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface SelectionViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lastName;
+
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
+
+
+
+
 
 @end
