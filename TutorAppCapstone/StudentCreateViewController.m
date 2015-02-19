@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSArray *permissions = [[NSArray alloc] initWithObjects: @"id",@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    NSArray *permissions = [[NSArray alloc] initWithObjects: @"id",@"first_name",@"last_name",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:YES
@@ -39,9 +39,9 @@
         
         
         self.facebookID = [result objectForKey:@"id"];
-        self.firstName.text = [result objectForKey:@"first_name"];
-        self.lastName.text = [result objectForKey:@"last_name"];
-        //self.picture.profileID = _facebookID;
+        self.studentCreateFirst.text = [result objectForKey:@"first_name"];
+        self.studentCreateLast.text = [result objectForKey:@"last_name"];
+        self.picture.profileID = _facebookID;
         
         
         

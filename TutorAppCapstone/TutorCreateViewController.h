@@ -10,4 +10,15 @@
 
 @interface TutorCreateViewController : UIViewController
 
+- (IBAction)studentCreateSubmitButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *tutorCreateFirst;
+@property (weak, nonatomic) IBOutlet UILabel *tutorCreateLast;
+@property (weak, nonatomic) IBOutlet UITextField *studentCreateUniversity;
+@property (weak, nonatomic) IBOutlet UITextField *studentCreateYear;
+@property (weak, nonatomic) IBOutlet UITextField *studentCreateMajor;
+//@property (strong, nonatomic) IBOutlet FBProfilePictureView *picture;
+@property (weak, nonatomic) IBOutlet NSString *facebookID;
+
+
 @end
