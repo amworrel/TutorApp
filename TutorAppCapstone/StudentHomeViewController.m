@@ -10,18 +10,22 @@
 
 @interface StudentHomeViewController ()
 
-
-
-
-
 @end
 
 @implementation StudentHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-  
+    // set as view controller object and data source for text labels
+    /*
+    NSString *strURL = [NSString stringWithFormat:@"http://cgi.soic.indiana.edu/~team14/get_student.php"];
+    
+    // exectue PHP code];
+    NSData *dataURL = [NSData dataWithContentsOfURL:[NSURL [URLWithString:strURL];
+    
+    //to retrieve reutrned values
+    NSString *strResult = [[[NSString alloc] initWithData:dataURL encoding:NSUTF8StringEncoding)]];
+    */
 }
 
 
