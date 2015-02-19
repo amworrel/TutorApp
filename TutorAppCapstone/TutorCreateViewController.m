@@ -7,6 +7,7 @@
 //
 
 #import "TutorCreateViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface TutorCreateViewController ()
 
@@ -17,6 +18,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *error) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        NSLog(@"%@", [result objectForKey:@"first_name"]);
+        NSLog(@"%@", [result objectForKey:@"last_name"]);
+        NSLog(@"%@", [result objectForKey:@"birthday"]);
+        NSLog(@"%@", [result objectForKey:@"email"]);
+        NSLog(@"%@", [result objectForKey:@"picture"]);
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.tutorCreateFirst.text = [result objectForKey:@"first_name"];
+        self.tutorCreateLast.text = [result objectForKey:@"last_name"];
+        self.picture.profileID = _facebookID;
+        
+        
+        
+    }];
+
+}
+// Makes the keyboard go away when "return" is hit
+-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +68,8 @@
 }
 */
 
+// Tap Gesture that makes keyboard go away when rest of the screen is tapped
+- (IBAction)backgroundTutorTap:(id)sender {
+    [self.view endEditing:YES];
+}
 @end

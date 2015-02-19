@@ -8,6 +8,7 @@
 
 #import "StudentCreateViewController.h"
 #import "StudentHomeViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 
 
@@ -23,8 +24,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.studentCreateFirst.delegate = self;
+    //self.studentCreateFirst.delegate = self;
     
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *error) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        NSLog(@"%@", [result objectForKey:@"first_name"]);
+        NSLog(@"%@", [result objectForKey:@"last_name"]);
+        NSLog(@"%@", [result objectForKey:@"birthday"]);
+        NSLog(@"%@", [result objectForKey:@"email"]);
+        NSLog(@"%@", [result objectForKey:@"picture"]);
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.studentCreateFirst.text = [result objectForKey:@"first_name"];
+        self.studentCreateLast.text = [result objectForKey:@"last_name"];
+        self.picture.profileID = _facebookID;
+        
+        
+        
+    }];
+
     
     
     
@@ -33,6 +61,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Makes the keyboard go away when "return" is hit
+-(BOOL)textFieldShouldReturn:(UITextField*)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
@@ -110,7 +144,7 @@
     
     
     
-   NSString *post = [[NSString alloc] initWithFormat:@"studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",[self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
+    NSString *post = [[NSString alloc] initWithFormat:@"studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",[self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -129,5 +163,9 @@
     
     
     
+}
+// Tap Gesture that makes keyboard go away when rest of the screen is tapped
+- (IBAction)backgroundStudentTap:(id)sender {
+    [self.view endEditing:YES];
 }
 @end
