@@ -22,6 +22,7 @@
 		B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B470B1A8D4F2000A11413 /* TutorHomeViewController.m */; };
 		B49B470F1A8D501800A11413 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B470E1A8D501800A11413 /* SelectionViewController.m */; };
 		B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B47111A8D503200A11413 /* StudentCreateViewController.m */; };
+		B4FDB6221A956E2A00B7F5CB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FDB6211A956E2A00B7F5CB /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		B49B470E1A8D501800A11413 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		B49B47101A8D503200A11413 /* StudentCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCreateViewController.h; sourceTree = "<group>"; };
 		B49B47111A8D503200A11413 /* StudentCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCreateViewController.m; sourceTree = "<group>"; };
+		B4FDB6201A956E2A00B7F5CB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		B4FDB6211A956E2A00B7F5CB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 		B4617C4A1A7AECA9001D2818 /* TutorAppCapstone */ = {
 			isa = PBXGroup;
 			children = (
+				B4FDB61F1A956E0800B7F5CB /* SWRevealViewController */,
 				B4617C4F1A7AECA9001D2818 /* AppDelegate.h */,
 				B4617C501A7AECA9001D2818 /* AppDelegate.m */,
 				B4617C521A7AECA9001D2818 /* LogInViewController.h */,
@@ -160,6 +164,15 @@
 				B4617C661A7AECA9001D2818 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4FDB61F1A956E0800B7F5CB /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4FDB6201A956E2A00B7F5CB /* SWRevealViewController.h */,
+				B4FDB6211A956E2A00B7F5CB /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +282,7 @@
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
+				B4FDB6221A956E2A00B7F5CB /* SWRevealViewController.m in Sources */,
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B4617C4E1A7AECA9001D2818 /* main.m in Sources */,
 				B49B470F1A8D501800A11413 /* SelectionViewController.m in Sources */,

@@ -24,7 +24,7 @@
     
     
     
-    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    NSArray *permissions = [[NSArray alloc] initWithObjects: @"id",@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
                                        allowLoginUI:YES
@@ -35,26 +35,23 @@
     
     
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
         NSLog(@"%@", [result objectForKey:@"first_name"]);
         NSLog(@"%@", [result objectForKey:@"last_name"]);
-        NSLog(@"%@", [result objectForKey:@"birthday"]);
-        NSLog(@"%@", [result objectForKey:@"email"]);
         NSLog(@"%@", [result objectForKey:@"picture"]);
         
+        
+        self.facebookID = [result objectForKey:@"id"];
         self.firstName.text = [result objectForKey:@"first_name"];
         self.lastName.text = [result objectForKey:@"last_name"];
-        //self.picture.pictureCropping = [result objectForKey:@"picture"];
+        self.picture.profileID = _facebookID;
         
-        
-        
-        self.picture = [result objectForKey:@"picture"];
+
         
         
     }];
     
-    [FBProfilePictureView class];
-    
-    //self.picture.profileID = user.id;
+   
     
     
     

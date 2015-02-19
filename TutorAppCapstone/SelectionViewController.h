@@ -17,7 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
 
-
+@property (weak, nonatomic) IBOutlet NSString *facebookID;
 
 
 

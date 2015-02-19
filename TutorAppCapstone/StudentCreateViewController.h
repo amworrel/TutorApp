@@ -13,12 +13,14 @@
 
 - (IBAction)studentCreateSubmitButton:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
+@property (weak, nonatomic) IBOutlet UILabel *lastName;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateUniversity;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateYear;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateMajor;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateFirst;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateLast;
-
-
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *picture;
+@property (weak, nonatomic) IBOutlet NSString *facebookID;
 
 @end
