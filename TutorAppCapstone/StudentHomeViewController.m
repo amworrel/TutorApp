@@ -21,13 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    /*self.displayFirstName.text = self.stringFromFirstName;
-    self.displayLastName.text = self.stringFromLastName;
-    self.displayUniversity.text = self.stringFromUniversity;
-    
-    self.displayFirstName.text = NSLog()
-    */
+  
 }
 
 

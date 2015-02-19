@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //self.studentCreateFirst.delegate = self;
+   
     
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
@@ -83,22 +83,7 @@
 
 - (IBAction)studentCreateSubmitButton:(id)sender {
     
-    /*
-    
-    StudentHomeViewController *SHVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentHomeViewController"];
-    
-    SHVC.stringFromFirstName = self.studentCreateFirst.text;
-    
-    SHVC.stringFromLastName = self.studentCreateLast.text;
-    
-    SHVC.stringFromUniversity = self.studentCreateUniversity.text;
-    
-    NSLog(self.studentCreateFirst.text );
-    
-    
-    [self presentViewController:SHVC animated:YES completion:nil];
-   
-     */
+  
      
     /*
     NSString *myRequestString = [[NSString alloc] initWithFormat:@"studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",[self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
