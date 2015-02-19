@@ -7,6 +7,8 @@
 //
 
 #import "StudentCreateViewController.h"
+#import "StudentHomeViewController.h"
+
 
 
 @interface StudentCreateViewController ()
@@ -20,6 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.studentCreateFirst.delegate = self;
+    
+    
+    
     
 }
 
@@ -38,8 +45,27 @@
 }
 */
 
+
+
 - (IBAction)studentCreateSubmitButton:(id)sender {
+    
+    /*
+    
+    StudentHomeViewController *SHVC = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentHomeViewController"];
+    
+    SHVC.stringFromFirstName = self.studentCreateFirst.text;
+    
+    SHVC.stringFromLastName = self.studentCreateLast.text;
+    
+    SHVC.stringFromUniversity = self.studentCreateUniversity.text;
+    
+    NSLog(self.studentCreateFirst.text );
+    
+    
+    [self presentViewController:SHVC animated:YES completion:nil];
    
+     */
+     
     /*
     NSString *myRequestString = [[NSString alloc] initWithFormat:@"studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",[self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
     NSData *myRequestData = [myRequestString dataUsingEncoding:NSUTF8StringEncoding];
