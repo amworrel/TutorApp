@@ -247,7 +247,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TutorMe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHH-4I-iNv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TutorMe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHH-4I-iNv">
                                 <rect key="frame" x="269" y="251" width="63" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -256,15 +256,8 @@
                                     <rect key="frame" x="168" y="249" width="64" height="20"/>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-UP-jYr" customClass="FBLoginView">
-                                <rect key="frame" x="163" y="381" width="275" height="84"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                </variation>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log-in with Facebook or Create Account to continue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBB-0t-wBt">
-                                <rect key="frame" x="99" y="289" width="403" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log-in with Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBB-0t-wBt">
+                                <rect key="frame" x="217" y="289" width="167" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -272,7 +265,7 @@
                                     <rect key="frame" x="26" y="290" width="348" height="20"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-yW-EPU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-yW-EPU">
                                 <rect key="frame" x="269" y="513" width="71" height="30"/>
                                 <state key="normal" title="Continue..">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,8 +274,27 @@
                                     <segue destination="BEo-IO-hFg" kind="show" id="a4z-GT-qJC"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-UP-jYr" customClass="FBLoginView">
+                                <rect key="frame" x="163" y="381" width="275" height="84"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yBB-0t-wBt" firstAttribute="top" secondItem="RHH-4I-iNv" secondAttribute="bottom" constant="17" id="3NM-gB-g36"/>
+                            <constraint firstItem="yBB-0t-wBt" firstAttribute="centerX" secondItem="RHH-4I-iNv" secondAttribute="centerX" id="8gf-Qw-cKh"/>
+                            <constraint firstItem="Yh7-yW-EPU" firstAttribute="top" secondItem="BG0-UP-jYr" secondAttribute="bottom" constant="48" id="DQ7-Ki-l6T"/>
+                            <constraint firstItem="BG0-UP-jYr" firstAttribute="leading" secondItem="aPB-cb-q2A" secondAttribute="leading" constant="163" id="Ebf-Wx-qpq"/>
+                            <constraint firstItem="RHH-4I-iNv" firstAttribute="top" secondItem="KtS-LP-h4e" secondAttribute="bottom" constant="231" id="LLq-iC-Ngo"/>
+                            <constraint firstItem="yBB-0t-wBt" firstAttribute="centerX" secondItem="BG0-UP-jYr" secondAttribute="centerX" id="LPE-oq-3mv"/>
+                            <constraint firstItem="5NV-sw-6SD" firstAttribute="top" secondItem="Yh7-yW-EPU" secondAttribute="bottom" constant="57" id="ML7-MQ-LkQ"/>
+                            <constraint firstItem="BG0-UP-jYr" firstAttribute="top" secondItem="yBB-0t-wBt" secondAttribute="bottom" constant="71" id="jnq-vZ-SVh"/>
+                            <constraint firstItem="RHH-4I-iNv" firstAttribute="leading" secondItem="Yh7-yW-EPU" secondAttribute="leading" id="ttq-vt-I9y"/>
+                            <constraint firstItem="yBB-0t-wBt" firstAttribute="centerX" secondItem="aPB-cb-q2A" secondAttribute="centerX" id="zew-QT-ME4"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="BEo-IO-hFg" kind="show" identifier="LogInSegue" id="xfb-0G-ClX"/>
@@ -4940,7 +4952,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="IL7-Hv-B4h"/>
         <segue reference="r2i-HZ-u51"/>
-        <segue reference="JKj-cw-oEg"/>
+        <segue reference="xfb-0G-ClX"/>
         <segue reference="0Yg-3Y-Nsw"/>
         <segue reference="CAM-Y4-VC6"/>
         <segue reference="4hm-Fc-7nq"/>
