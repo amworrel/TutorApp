@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateMajor;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateFirst;
 @property (weak, nonatomic) IBOutlet UITextField *studentCreateLast;
-@property (strong, nonatomic) IBOutlet FBProfilePictureView *picture;
+//@property (strong, nonatomic) IBOutlet FBProfilePictureView *picture;
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 
 @end

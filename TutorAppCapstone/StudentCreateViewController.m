@@ -41,7 +41,7 @@
         self.facebookID = [result objectForKey:@"id"];
         self.firstName.text = [result objectForKey:@"first_name"];
         self.lastName.text = [result objectForKey:@"last_name"];
-        self.picture.profileID = _facebookID;
+        //self.picture.profileID = _facebookID;
         
         
         
