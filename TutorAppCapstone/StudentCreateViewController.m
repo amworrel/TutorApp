@@ -8,6 +8,7 @@
 
 #import "StudentCreateViewController.h"
 
+
 @interface StudentCreateViewController ()
 
 @end
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +36,28 @@
 }
 */
 
+- (IBAction)studentCreateSubmitButton:(id)sender {
+    
+    NSString *first = self.studentCreateFirst.text;
+    
+    NSString *last = self.studentCreateLast.text;
+    
+    NSString *university = self.studentCreateUniversity.text;
+    
+    NSString *year = self.studentCreateYear.text;
+    
+    NSString *major = self.studentCreateMajor.text;
+    
+    NSLog(first);
+    
+    NSLog(last);
+   
+    NSLog(university);
+    
+    NSLog(year);
+    
+    NSLog(major);
+    
+    
+}
 @end

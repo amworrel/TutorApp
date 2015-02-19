@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Av8-4X-HPB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Av8-4X-HPB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,9 +26,6 @@
                                 </items>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-77" y="20" width="600" height="44"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 </variation>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="University:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlb-LZ-aqC">
@@ -65,18 +62,12 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="288" y="141" width="96" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="271" y="145" width="296" height="30"/>
-                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgB-FG-gzF">
                                 <rect key="frame" x="100" y="345" width="64" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="28" y="371" width="64" height="20"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abE-Ox-MOh">
                                 <rect key="frame" x="100" y="288" width="40" height="20"/>
@@ -91,8 +82,7 @@
                                         <exclude reference="IQG-IN-9py"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="28" y="318" width="40" height="20"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="IQG-IN-9py"/>
                                     </mask>
@@ -105,9 +95,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="242" width="193" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="167" y="260" width="393" height="30"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYY-0P-gCH">
                                 <rect key="frame" x="335" y="342" width="136" height="30"/>
@@ -116,9 +103,6 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="342" width="193" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="167" y="366" width="393" height="30"/>
-                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dh3-Kr-meu">
                                 <rect key="frame" x="335" y="285" width="136" height="30"/>
@@ -126,9 +110,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="175" y="294" width="193" height="30"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="167" y="315" width="393" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYb-yD-cEO">
@@ -139,10 +120,8 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="271" y="471" width="49" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="321" y="462" width="49" height="30"/>
-                                </variation>
                                 <connections>
+                                    <action selector="studentCreateSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gt0-bz-yRF"/>
                                     <segue destination="caa-hd-9eF" kind="show" id="r2i-HZ-u51"/>
                                 </connections>
                             </button>
@@ -170,9 +149,6 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="223" y="462" width="48" height="30"/>
-                                </variation>
                                 <connections>
                                     <segue destination="BEo-IO-hFg" kind="show" id="nV4-iP-TSm"/>
                                 </connections>
@@ -296,6 +272,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="studentCreateFirst" destination="eQ3-rk-gW1" id="Jgz-0i-Ccs"/>
+                        <outlet property="studentCreateLast" destination="9ka-hT-Kzi" id="tPV-uM-Gzk"/>
+                        <outlet property="studentCreateMajor" destination="fYY-0P-gCH" id="4vc-bv-gJp"/>
+                        <outlet property="studentCreateUniversity" destination="RGt-Fn-oTf" id="Vdj-tO-tHq"/>
+                        <outlet property="studentCreateYear" destination="Dh3-Kr-meu" id="uvu-Rl-RKx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -385,6 +368,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="240" width="196" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="241" width="396" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5EP-lZ-zVk">
                                 <rect key="frame" x="270" y="285" width="196" height="30"/>
@@ -392,6 +378,9 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="283" width="196" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="284" width="396" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJY-2z-pLn">
@@ -401,6 +390,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="327" width="196" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="328" width="396" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovb-6M-1AE">
                                 <rect key="frame" x="270" y="374" width="196" height="30"/>
@@ -409,6 +401,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="374" width="196" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="375" width="396" height="30"/>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-Lz-ipf">
                                 <rect key="frame" x="270" y="421" width="196" height="30"/>
@@ -416,6 +411,9 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="419" width="196" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="420" width="396" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Courses:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-5l-iEW">
@@ -442,6 +440,9 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="270" y="465" width="196" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="466" width="396" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-1x-FRP">
@@ -478,6 +479,9 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="250" y="145" width="297" height="30"/>
+                                </variation>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mpI-nk-GFM">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -904,7 +908,7 @@
         <!--Selection View Controller-->
         <scene sceneID="6n6-a3-9qJ">
             <objects>
-                <viewController id="BEo-IO-hFg" customClass="SelectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectionViewController" id="BEo-IO-hFg" customClass="SelectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YlK-Jy-9Sd"/>
                         <viewControllerLayoutGuide type="bottom" id="xHE-SI-t1j"/>
@@ -1038,26 +1042,26 @@
                                 <exclude reference="ff4-gT-cTU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0Dd-Wz-1MF"/>
-                                <exclude reference="Tbs-wn-5xa"/>
-                                <exclude reference="laf-bd-REh"/>
-                                <exclude reference="3Ze-v2-h5a"/>
-                                <exclude reference="U3c-ZC-Fic"/>
-                                <exclude reference="YiD-ea-RJd"/>
                                 <exclude reference="6yA-f4-2gX"/>
                                 <exclude reference="PqT-O9-aLf"/>
                                 <exclude reference="wVc-a0-YGU"/>
                                 <exclude reference="yLs-mu-dQm"/>
+                                <exclude reference="0Dd-Wz-1MF"/>
+                                <exclude reference="Tbs-wn-5xa"/>
+                                <exclude reference="laf-bd-REh"/>
+                                <exclude reference="7rl-Z2-XTz"/>
+                                <exclude reference="j18-cZ-f5L"/>
+                                <exclude reference="ugT-1y-HL4"/>
                                 <exclude reference="9oz-IY-dxx"/>
                                 <exclude reference="efr-yM-ugy"/>
                                 <exclude reference="B6t-6w-AvA"/>
                                 <exclude reference="Esx-iy-g8c"/>
-                                <exclude reference="7rl-Z2-XTz"/>
-                                <exclude reference="j18-cZ-f5L"/>
-                                <exclude reference="ugT-1y-HL4"/>
                                 <exclude reference="8tQ-1y-ca2"/>
                                 <exclude reference="Hv5-rS-Y8y"/>
                                 <exclude reference="cdp-yy-JkX"/>
+                                <exclude reference="3Ze-v2-h5a"/>
+                                <exclude reference="U3c-ZC-Fic"/>
+                                <exclude reference="YiD-ea-RJd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1068,26 +1072,26 @@
                                 <include reference="ff4-gT-cTU"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0Dd-Wz-1MF"/>
-                                <include reference="Tbs-wn-5xa"/>
-                                <include reference="laf-bd-REh"/>
-                                <include reference="3Ze-v2-h5a"/>
-                                <include reference="U3c-ZC-Fic"/>
-                                <include reference="YiD-ea-RJd"/>
                                 <include reference="6yA-f4-2gX"/>
                                 <include reference="PqT-O9-aLf"/>
                                 <include reference="wVc-a0-YGU"/>
                                 <include reference="yLs-mu-dQm"/>
+                                <include reference="0Dd-Wz-1MF"/>
+                                <include reference="Tbs-wn-5xa"/>
+                                <include reference="laf-bd-REh"/>
+                                <include reference="7rl-Z2-XTz"/>
+                                <include reference="j18-cZ-f5L"/>
+                                <include reference="ugT-1y-HL4"/>
                                 <include reference="9oz-IY-dxx"/>
                                 <include reference="efr-yM-ugy"/>
                                 <include reference="B6t-6w-AvA"/>
                                 <include reference="Esx-iy-g8c"/>
-                                <include reference="7rl-Z2-XTz"/>
-                                <include reference="j18-cZ-f5L"/>
-                                <include reference="ugT-1y-HL4"/>
                                 <include reference="8tQ-1y-ca2"/>
                                 <include reference="Hv5-rS-Y8y"/>
                                 <include reference="cdp-yy-JkX"/>
+                                <include reference="3Ze-v2-h5a"/>
+                                <include reference="U3c-ZC-Fic"/>
+                                <include reference="YiD-ea-RJd"/>
                             </mask>
                         </variation>
                     </view>
@@ -2273,7 +2277,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-YO-Ut4">
                                 <rect key="frame" x="390" y="108" width="30" height="30"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -2403,7 +2407,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jd-j0-5CV">
                                 <rect key="frame" x="397" y="93" width="30" height="30"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
@@ -3268,7 +3272,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LM-dD-ryi">
                                 <rect key="frame" x="397" y="78" width="30" height="30"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
@@ -4987,14 +4991,14 @@
         <image name="Tutor.jpg" width="800" height="533"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4hm-Fc-7nq"/>
-        <segue reference="0Yg-3Y-Nsw"/>
-        <segue reference="JKj-cw-oEg"/>
-        <segue reference="CAM-Y4-VC6"/>
-        <segue reference="8q0-Az-do6"/>
-        <segue reference="IL7-Hv-B4h"/>
-        <segue reference="vty-AB-Kqw"/>
         <segue reference="sAZ-Lf-cQ3"/>
+        <segue reference="r2i-HZ-u51"/>
+        <segue reference="nV4-iP-TSm"/>
+        <segue reference="0Yg-3Y-Nsw"/>
+        <segue reference="CAM-Y4-VC6"/>
+        <segue reference="4hm-Fc-7nq"/>
+        <segue reference="IL7-Hv-B4h"/>
+        <segue reference="8q0-Az-do6"/>
         <segue reference="BqC-mZ-mge"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 #import "SelectionViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+
 @interface SelectionViewController ()
 
 @end
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
     
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
