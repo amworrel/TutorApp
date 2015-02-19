@@ -50,6 +50,8 @@
 
 -(void)loginView:(FBLoginView *)loginView handleError:(NSError *)error
 {
+    
+    
     NSString *alertMessage, *alertTitle;
     
     if ([FBErrorUtility shouldNotifyUserForError:error])

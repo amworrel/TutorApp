@@ -8,6 +8,8 @@
 
 #import "SelectionViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "StudentCreateViewController.h"
+
 
 
 @interface SelectionViewController ()
@@ -43,12 +45,17 @@
         self.lastName.text = [result objectForKey:@"last_name"];
         //self.picture.pictureCropping = [result objectForKey:@"picture"];
         
-        self.picture.profileID= [result objectForKey:@"picture"];
+        
+        
+        self.picture = [result objectForKey:@"picture"];
         
         
     }];
     
+    [FBProfilePictureView class];
+    
     //self.picture.profileID = user.id;
+    
     
     
 }
