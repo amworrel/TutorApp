@@ -29,7 +29,7 @@
                                   }];
     
     
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) { 
         NSLog(@"%@", [result objectForKey:@"id"]);
         NSLog(@"%@", [result objectForKey:@"first_name"]);
         NSLog(@"%@", [result objectForKey:@"last_name"]);
