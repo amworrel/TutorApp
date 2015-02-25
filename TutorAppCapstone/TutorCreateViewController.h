@@ -11,6 +11,8 @@
 
 @interface TutorCreateViewController : UIViewController <UITextFieldDelegate> 
 
+- (IBAction)tutorCreateSubmitButton:(id)sender;
+
 @property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
 
 @property (weak, nonatomic) IBOutlet UILabel *tutorCreateFirst;

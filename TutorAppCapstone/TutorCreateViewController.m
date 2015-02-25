@@ -45,6 +45,7 @@
         
         
     }];
+    
 
 }
 // Makes the keyboard go away when "return" is hit
@@ -72,4 +73,48 @@
 - (IBAction)backgroundTutorTap:(id)sender {
     [self.view endEditing:YES];
 }
+
+
+-(IBAction)tutorCreateSubmitButton:(id)sender {
+    NSInteger success = 0;
+    
+    
+    NSString *post = [[NSString alloc] initWithFormat:@"tutorCreateFirst=%@&tutorCreateLast=%@&tutorCreateUniversity=%@&tutorCreateYear=%@&tutorCreateMajor=%@&tutorCreateCourses%@&tutorCreateBio%@",[self.tutorCreateFirst text], [self.tutorCreateLast text], [self.tutorCreateUniversity text], [self.tutorCreateYear text], [self.tutorCreateMajor text], [self.tutorCreateCourses text], [self.tutorCreateBio text]];
+    
+    NSLog(@"PostData: %@", post);
+    
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_tutor.php"];
+    
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:postData];
+    
+    NSLog(@"URLRequest: %@", request);
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *response = nil;
+    NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    NSLog(@"Response code: %ld", (long)[response statusCode]);
+    
+    NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response ==> %@", responseData);
+    
+    NSDictionary *jsonData = [NSJSONSerialization
+                              JSONObjectWithData:urlData
+                              options:NSJSONReadingMutableContainers
+                              error:&error];
+    success = [jsonData[@"success"] integerValue];
+    NSLog(@"Success: %ld", (long)success);
+
+}
+
+
 @end
