@@ -24,6 +24,7 @@
     
     
     
+    
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
@@ -50,6 +51,9 @@
         
         
     }];
+    
+    
+    
     
         
 }

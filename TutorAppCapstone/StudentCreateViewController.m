@@ -89,7 +89,7 @@
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_student2.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_student3.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
