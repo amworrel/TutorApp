@@ -55,11 +55,11 @@
     NSInteger success = 0;
     
     
-    NSString *post = [[NSString alloc] initWithFormat:@"AccountID=%@",[self.facebookID ]];
+    NSString *post = [[NSString alloc] initWithFormat:@"accountID=%@",[self.facebookID self]];
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_student3.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_id.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
