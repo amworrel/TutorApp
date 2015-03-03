@@ -31,11 +31,11 @@
                                        allowLoginUI:YES
                                   completionHandler:^(FBSession *session,
                                                       FBSessionState status,
-                                                      NSError *error) {
+                                                      NSError *fbError) {
                                   }];
     
     
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
         NSLog(@"%@", [result objectForKey:@"id"]);
         NSLog(@"%@", [result objectForKey:@"first_name"]);
         NSLog(@"%@", [result objectForKey:@"last_name"]);
@@ -45,15 +45,14 @@
         self.firstName.text = [result objectForKey:@"first_name"];
         self.lastName.text = [result objectForKey:@"last_name"];
         self.picture.profileID = _facebookID;
-        
-        
-        
-    }];
+
     
+  
     NSInteger success = 0;
     
     
-    NSString *post = [[NSString alloc] initWithFormat:@"accountID=%@",[self.facebookID self]];
+    NSString *post = [[NSString alloc] initWithFormat:@"accountID=%@", self.facebookID.self];
+    
     
     NSLog(@"PostData: %@", post);
     
@@ -89,7 +88,7 @@
     NSLog(@"Success: %ld", (long)success);
 
     
-    
+}];
     
 }
 

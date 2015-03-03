@@ -76,10 +76,26 @@
 
 
 -(IBAction)tutorCreateSubmitButton:(id)sender {
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        self.facebookID = [result objectForKey:@"id"];
+    
     NSInteger success = 0;
     
     
-    NSString *post = [[NSString alloc] initWithFormat:@"tutorCreateFirst=%@&tutorCreateLast=%@&tutorCreateUniversity=%@&tutorCreateYear=%@&tutorCreateMajor=%@&tutorCreateCourses%@&tutorCreateBio%@",[self.tutorCreateFirst text], [self.tutorCreateLast text], [self.tutorCreateUniversity text], [self.tutorCreateYear text], [self.tutorCreateMajor text], [self.tutorCreateCourses text], [self.tutorCreateBio text]];
+        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&tutorCreateFirst=%@&tutorCreateLast=%@&tutorCreateUniversity=%@&tutorCreateYear=%@&tutorCreateMajor=%@&tutorCourseCode=%@&tutorCourseID%@", self.facebookID.self, [self.tutorCreateFirst text], [self.tutorCreateLast text], [self.tutorCreateUniversity text], [self.tutorCreateYear text], [self.tutorCreateMajor text], [self.tutorCourseCode text], [self.tutorCourseID text]];
     
     NSLog(@"PostData: %@", post);
     
@@ -114,7 +130,9 @@
     success = [jsonData[@"success"] integerValue];
     NSLog(@"Success: %ld", (long)success);
 
+    }];
 }
+     
 
 
 @end

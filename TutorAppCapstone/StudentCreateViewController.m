@@ -32,11 +32,11 @@
                                        allowLoginUI:YES
                                   completionHandler:^(FBSession *session,
                                                       FBSessionState status,
-                                                      NSError *error) {
+                                                      NSError *fbError) {
                                   }];
     
     
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
         NSLog(@"%@", [result objectForKey:@"id"]);
         NSLog(@"%@", [result objectForKey:@"first_name"]);
         NSLog(@"%@", [result objectForKey:@"last_name"]);
@@ -82,10 +82,26 @@
 
 
 - (IBAction)studentCreateSubmitButton:(id)sender {
-    NSInteger success = 0;
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+
+        self.facebookID = [result objectForKey:@"id"];
+    
+        NSInteger success = 0;
   
     
-    NSString *post = [[NSString alloc] initWithFormat:@"studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",[self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
+    NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&studentCreateFirst=%@&studentCreateLast=%@&studentCreateUniversity=%@&studentCreateYear=%@&studentCreateMajor=%@",self.facebookID.self, [self.studentCreateFirst text], [self.studentCreateLast text], [self.studentCreateUniversity text], [self.studentCreateYear text], [self.studentCreateMajor text]];
     
     NSLog(@"PostData: %@", post);
     
@@ -119,8 +135,7 @@
                                   error:&error];
         success = [jsonData[@"success"] integerValue];
         NSLog(@"Success: %ld", (long)success);
-    
-
+    }];
     
 }
 // Tap Gesture that makes keyboard go away when rest of the screen is tapped

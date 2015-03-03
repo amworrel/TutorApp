@@ -20,9 +20,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *tutorCreateUniversity;
 @property (weak, nonatomic) IBOutlet UITextField *tutorCreateYear;
 @property (weak, nonatomic) IBOutlet UITextField *tutorCreateMajor;
-@property (weak, nonatomic) IBOutlet UITextField *tutorCreateCourses;
-@property (weak, nonatomic) IBOutlet UITextField *tutorCreateBio;
+
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
+@property (weak, nonatomic) IBOutlet UITextField *tutorCourseCode;
+@property (weak, nonatomic) IBOutlet UITextField *tutorCourseID;
 
 - (IBAction)backgroundTutorTap:(id)sender;
 
