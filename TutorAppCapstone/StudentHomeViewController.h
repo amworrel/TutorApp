@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *studentYear;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *StudentHomeSearchBar;
 
 
 

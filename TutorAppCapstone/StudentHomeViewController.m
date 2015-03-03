@@ -29,7 +29,10 @@
 }
 
 
-
+-(void)searchBarSearchButtonClicked:(UISearchBar *)StudentHomeSearchBar{
+    
+    [self performSegueWithIdentifier:@"searchSegue" sender:self];
+}
 
 
 

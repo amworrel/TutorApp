@@ -1705,6 +1705,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="StudentHomeSearchBar" destination="pVc-WF-sgO" id="cfa-mB-l30"/>
                         <outlet property="studentHomeFirst" destination="3EX-Wb-BrG" id="WMS-bD-eG3"/>
                         <outlet property="studentHomeLast" destination="Ijj-H7-tLY" id="fme-kt-DfP"/>
                         <outlet property="studentHomeUniversity" destination="NJS-nt-uBF" id="AUt-dx-mvW"/>
@@ -1920,7 +1921,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1680" y="2358"/>
+            <point key="canvasLocation" x="1704" y="2358"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vMk-cP-xAn">
