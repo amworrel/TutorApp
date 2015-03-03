@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C99A11AA5271900FD9656 /* StudentSearchViewController.m */; };
 		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
 		26E7E6001A9D2D6A00D9FB5B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		219C99A01AA5271900FD9656 /* StudentSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSearchViewController.h; sourceTree = "<group>"; };
+		219C99A11AA5271900FD9656 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
 		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
 		26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 				B49B47111A8D503200A11413 /* StudentCreateViewController.m */,
 				B49B470B1A8D4F2000A11413 /* TutorHomeViewController.m */,
 				B49B47011A8D4ECF00A11413 /* TutorCreateViewController.h */,
+				219C99A01AA5271900FD9656 /* StudentSearchViewController.h */,
+				219C99A11AA5271900FD9656 /* StudentSearchViewController.m */,
 				B49B47021A8D4ECF00A11413 /* TutorCreateViewController.m */,
 				B4617C551A7AECA9001D2818 /* Main.storyboard */,
 				B4617C581A7AECA9001D2818 /* Images.xcassets */,
@@ -274,6 +279,7 @@
 			files = (
 				B49B47031A8D4ECF00A11413 /* TutorCreateViewController.m in Sources */,
 				B49B47091A8D4F1400A11413 /* StudentHomeViewController.m in Sources */,
+				219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */,
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
