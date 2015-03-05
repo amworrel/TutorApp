@@ -21,9 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-     self.listItems = [[NSMutableArray alloc] init];
+     self.resultsArray = [[NSMutableArray alloc] init];
     
-    [self.listItems addObject:@"One"];
+    
+    
+    //[self.listItems addObject:@"One"];
     
    }
 
@@ -35,17 +37,47 @@
 
 
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.resultsArray count];
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *SimpleIdentifier = @"SimpleIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
+    }
+    
+    cell.textLabel.text = self.resultsArray[indexPath.row];
+    
+    return cell;
+    
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Perform segue to candy detail
+    [self performSegueWithIdentifier:@"tutorDetail" sender:tableView];
+}
+
+
+
+
 
 - (IBAction)submitSearch:(id)sender {
     
     NSInteger success = 0;
+    
     
     NSString *post = [[NSString alloc] initWithFormat:@"searchText=%@", [self.searchText text]];
     
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/search.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/search_test.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -74,70 +106,70 @@
                               options:NSJSONReadingMutableContainers
                               error:&error];
     
+    
+    NSString *stringW = [responseData stringByReplacingOccurrencesOfString:@"\"" withString:@"" options:NSCaseInsensitiveSearch range:(NSRange){0,[responseData length]}];
+    
+    NSString *newString =[stringW stringByReplacingOccurrencesOfString:@"{CONCAT(t.fname,' ',t.lname)" withString:@""];
+    
+     NSString *finalString =[newString stringByReplacingOccurrencesOfString:@"}" withString:@""];
+    
+    NSMutableArray *resultsArray = [finalString componentsSeparatedByString:@":"];
+    
+    
+   /* NSInteger count = [resultsArray count];
+    for (id obj in resultsArray){
+        
+        if ([obj isEqualToString:@""]) {
+            [resultsArray removeObjectAtIndex:];
+        }
+    }
+    */
+    
+    
     //success = [jsonData[@"success"] integerValue];
     NSLog(@"Success: %ld", (long)success);
 
-    NSMutableArray *resultsArray = [responseData componentsSeparatedByString:@":"];
     
-    NSLog(@"Data", resultsArray);
+    //NSString *resultString= [responseData componentsSeparatedByString:@":"];
+    
+    
+    //NSMutableArray *resultsArray = [responseData componentsSeparatedByString:@":"];
+    
+    //NSString *resultsString = [resultsArray componentsJoinedByString:@":"];
+    
+  
     
     NSLog(@"Json Data", jsonData);
     
+    
+    for (id obj in resultsArray)
+    [self.resultsArray addObject:obj];
+    
+    
+    
+    //for (i = 0; i < [resultsArray count]; i++ )
+        //id resultsArrayElement = [resultsArray ]
+        //if(i % 2)!= 0{
+           // [self.resultsArray addObject:obj];
+       // }
+    
     for (id obj in resultsArray)
         NSLog(@"obj: %@", obj);
+    
     
     //self.test = JSON.parse(jsonData);
     
     
     //var obj = responseData.parseJSON('{"fname": "Amy"}');
     
-    //for (id obj in resultsArray)
-        //[self.listItems addObject:obj];
+   
+    return [self.tableView reloadData];
+    
+    
+  
     
 
-    
-    }
-
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.listItems count];
-    
 }
-
--(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *SimpleIdentifier = @"SimpleIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
-    }
-    
-    cell.textLabel.text = self.listItems[indexPath.row];
-    
-    return cell;
-    
-}
-
-
-- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath {[tableView setEditing:YES animated:YES];
-}
-
-- (void)tableView: (UITableView *)tableView commitEditingStyle: (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath: (NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        
-        [self.listItems removeObjectAtIndex:[indexPath row]];
-        
-        // Delete row using the cool literal version of [NSArray arrayWithObject:indexPath]
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-    }
-    
-}
-
 
 
 

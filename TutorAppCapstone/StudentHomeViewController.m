@@ -7,6 +7,8 @@
 //
 
 #import "StudentHomeViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+
 
 @interface StudentHomeViewController ()
 
@@ -26,23 +28,36 @@
     //to retrieve reutrned values
     NSString *strResult = [[[NSString alloc] initWithData:dataURL encoding:NSUTF8StringEncoding)]];
     */
-}
-
-
--(void)searchBarSearchButtonClicked:(UISearchBar *)StudentHomeSearchBar{
     
-    [self performSegueWithIdentifier:@"searchSegue" sender:self];
-}
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.studentHomeFirst.text = [result objectForKey:@"first_name"];
+        self.studentHomeLast.text = [result objectForKey:@"last_name"];
+        self.facebookID = [result objectForKey:@"id"];
+        self.picture.profileID = _facebookID;
+    
+    }];
+    
+    
     
 }
+
+
+
 
 /*
 #pragma mark - Navigation

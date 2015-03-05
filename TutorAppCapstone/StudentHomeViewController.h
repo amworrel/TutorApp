@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface StudentHomeViewController : UIViewController
 
@@ -21,11 +22,9 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *StudentHomeSearchBar;
 
 
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
 
-
-
-
-
+@property (weak, nonatomic) IBOutlet NSString *facebookID;
 
 
 @end

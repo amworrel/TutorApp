@@ -11,7 +11,9 @@
 @interface StudentSearchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 
-@property (strong, nonatomic) NSMutableArray *listItems;
+@property (strong, nonatomic) NSArray *listItems;
+
+@property (strong, nonatomic) NSMutableArray *resultsArray;
 
 @property(strong, nonatomic) NSString *test;
 
