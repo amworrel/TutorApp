@@ -14,162 +14,129 @@
 
 @implementation StudentSearchViewController
 
-@synthesize category;
-@synthesize name;
 
-+ (id)tutorOfCategory:(NSString *)category name:(NSString *)name
-{
-    StudentSearchViewController *newTutor = [[self alloc] init];
-    newTutor.category = category;
-    newTutor.name = name;
-    return newTutor;
-}
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Sample Data for tutorArray
-    self.tutorArray = [NSArray arrayWithObjects:
-                       [StudentSearchViewController tutorOfCategory:@"I101" name:@"Sam Williams"],
-                       [StudentSearchViewController tutorOfCategory:@"K201" name:@"Anne Thompson"],
-                       [StudentSearchViewController tutorOfCategory:@"I300" name:@"Tim Franklin"],
-                       [StudentSearchViewController tutorOfCategory:@"I101" name:@"Becky Smith"],
-                       [StudentSearchViewController tutorOfCategory:@"K201" name:@"Fred Lineman"],
-                       [StudentSearchViewController tutorOfCategory:@"I300" name:@"Brittany Baker"],
-                       [StudentSearchViewController tutorOfCategory:@"I101" name:@"David Foster"],
-                       [StudentSearchViewController tutorOfCategory:@"K201" name:@"Nancy Drew"],
-                       [StudentSearchViewController tutorOfCategory:@"I300" name:@"Alec Marksman"],
-                       [StudentSearchViewController tutorOfCategory:@"I101" name:@"Tammy Wilson"], nil];
+     self.listItems = [[NSMutableArray alloc] init];
     
+    [self.listItems addObject:@"One"];
     
-    
-    // Initialize the filteredTutorArray with a capacity equal to the tutorArray's capacity
-    self.filteredTutorArray = [NSMutableArray arrayWithCapacity:[self.tutorArray count]];
-    
-    
-    
-    // Reload the table
-    [self.tableView reloadData];
-    
-}
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+- (IBAction)submitSearch:(id)sender {
     
-    // Check to see whether the normal table or search results table is being displayed and return the count from the appropriate array
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [self.filteredTutorArray count];
-    } else {
-        return [self.tutorArray count];
+    NSInteger success = 0;
+    
+    NSString *post = [[NSString alloc] initWithFormat:@"searchText=%@", [self.searchText text]];
+    
+    
+    NSLog(@"PostData: %@", post);
+    
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/search.php"];
+    
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:postData];
+    
+    NSLog(@"URLRequest: %@", request);
+    
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *response = nil;
+    NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    NSLog(@"Response code: %ld", (long)[response statusCode]);
+    
+    NSString *responseData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+    NSLog(@"Response ==> %@", responseData);
+    
+    NSDictionary *jsonData = [NSJSONSerialization
+                              JSONObjectWithData:urlData
+                              options:NSJSONReadingMutableContainers
+                              error:&error];
+    
+    //success = [jsonData[@"success"] integerValue];
+    NSLog(@"Success: %ld", (long)success);
+
+    NSMutableArray *resultsArray = [responseData componentsSeparatedByString:@":"];
+    
+    NSLog(@"Data", resultsArray);
+    
+    NSLog(@"Json Data", jsonData);
+    
+    for (id obj in resultsArray)
+        NSLog(@"obj: %@", obj);
+    
+    //self.test = JSON.parse(jsonData);
+    
+    
+    //var obj = responseData.parseJSON('{"fname": "Amy"}');
+    
+    //for (id obj in resultsArray)
+        //[self.listItems addObject:obj];
+    
+
+    
     }
+
+
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.listItems count];
+    
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if ( cell == nil ) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    // Create a new Tutor Object
-    StudentSearchViewController *tutor = nil;
+-(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *SimpleIdentifier = @"SimpleIdentifier";
     
-    // Check to see whether the normal table or search results table is being displayed and set the Tutor object from the appropriate array
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        tutor = [self.filteredTutorArray objectAtIndex:indexPath.row];
-    } else {
-        tutor = [self.tutorArray objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleIdentifier];
     }
-    // Configure the cell
-    cell.textLabel.text = tutor.name;
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
+    cell.textLabel.text = self.listItems[indexPath.row];
+    
     return cell;
+    
 }
 
 
-
-#pragma mark Content Filtering
--(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    // Update the filtered array based on the search text and scope.
-    // Remove all objects from the filtered search array
-    [self.filteredTutorArray removeAllObjects];
-    // Filter the array using NSPredicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
-    self.filteredTutorArray = [NSMutableArray arrayWithArray:[self.tutorArray filteredArrayUsingPredicate:predicate]];
+- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath {[tableView setEditing:YES animated:YES];
 }
 
-#pragma mark - UISearchDisplayController Delegate Methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    // Tells the table data source to reload when text changes
-    [self filterContentForSearchText:searchString scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
-
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    // Tells the table data source to reload when scope bar selection changes
-    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
-
-#pragma mark - TableView Delegate
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Perform segue to tutor detail
-    [self performSegueWithIdentifier:@"tutorDetail" sender:tableView];
-}
-
-
-#pragma mark - Segue
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"tutorDetail"]) {
-        UIViewController *tutorDetailViewController = [segue destinationViewController];
-        // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
-        if(sender == self.searchDisplayController.searchResultsTableView) {
-            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[self.filteredTutorArray objectAtIndex:[indexPath row]] name];
-            [tutorDetailViewController setTitle:destinationTitle];
-        }
-        else {
-            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[self.tutorArray objectAtIndex:[indexPath row]] name];
-            [tutorDetailViewController setTitle:destinationTitle];
-        }
+- (void)tableView: (UITableView *)tableView commitEditingStyle: (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath: (NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        
+        [self.listItems removeObjectAtIndex:[indexPath row]];
+        
+        // Delete row using the cool literal version of [NSArray arrayWithObject:indexPath]
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
     }
+    
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

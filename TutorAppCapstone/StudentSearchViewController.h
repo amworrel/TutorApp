@@ -8,24 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudentSearchViewController : UIViewController<UISearchBarDelegate, UISearchDisplayDelegate, UITableViewDelegate>{
-    
-    NSString *category;
-    NSString *name;
-}
-
-@property (nonatomic, copy) NSString *category;
-@property (nonatomic, copy) NSString *name;
-
-+ (id)tutorOfCategory:(NSString*)category name:(NSString*)name;
+@interface StudentSearchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 
-@property (strong,nonatomic) NSArray *tutorArray;
+@property (strong, nonatomic) NSMutableArray *listItems;
 
-@property (strong,nonatomic) NSMutableArray *filteredTutorArray;
+@property(strong, nonatomic) NSString *test;
 
-@property IBOutlet UISearchBar *tutorSearchBar;
+
+
+
+
+@property (weak, nonatomic) IBOutlet UITextField *searchText;
+
+
+- (IBAction)submitSearch:(id)sender;
+
 
 
 @property IBOutlet UITableView *tableView;
+
+
 @end
