@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		071B47FB1AACFDEE007EF36D /* DannyAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */; };
-		071B47FD1AACFF90007EF36D /* DannyAppIcon60.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B47FC1AACFF90007EF36D /* DannyAppIcon60.png */; };
-		071B47FF1AACFF97007EF36D /* DannyAppIcon40.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B47FE1AACFF97007EF36D /* DannyAppIcon40.png */; };
-		071B48011AACFFA3007EF36D /* DannyAppIcon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48001AACFFA3007EF36D /* DannyAppIcon29.png */; };
 		071B48031AAD01B9007EF36D /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48021AAD01B9007EF36D /* AppIcon58x58.png */; };
+		071B48051AAD06A2007EF36D /* LaunchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */; };
+		071B48071AAD09E3007EF36D /* Launch ScreenGood.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071B48061AAD09E3007EF36D /* Launch ScreenGood.xib */; };
+		071B48091AAD0CA6007EF36D /* TutorUpLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48081AAD0CA6007EF36D /* TutorUpLogo.png */; };
 		219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C99A11AA5271900FD9656 /* StudentSearchViewController.m */; };
 		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
@@ -44,10 +44,10 @@
 
 /* Begin PBXFileReference section */
 		071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DannyAppIcon.png; sourceTree = "<group>"; };
-		071B47FC1AACFF90007EF36D /* DannyAppIcon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DannyAppIcon60.png; sourceTree = "<group>"; };
-		071B47FE1AACFF97007EF36D /* DannyAppIcon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DannyAppIcon40.png; sourceTree = "<group>"; };
-		071B48001AACFFA3007EF36D /* DannyAppIcon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DannyAppIcon29.png; sourceTree = "<group>"; };
 		071B48021AAD01B9007EF36D /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
+		071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen640x960.png; sourceTree = "<group>"; };
+		071B48061AAD09E3007EF36D /* Launch ScreenGood.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch ScreenGood.xib"; sourceTree = "<group>"; };
+		071B48081AAD0CA6007EF36D /* TutorUpLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TutorUpLogo.png; sourceTree = "<group>"; };
 		219C99A01AA5271900FD9656 /* StudentSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSearchViewController.h; sourceTree = "<group>"; };
 		219C99A11AA5271900FD9656 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
@@ -105,11 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				21DB73B41A9156090062E9A9 /* Tutor.jpg */,
+				071B48081AAD0CA6007EF36D /* TutorUpLogo.png */,
+				071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */,
 				071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */,
 				071B48021AAD01B9007EF36D /* AppIcon58x58.png */,
-				071B47FC1AACFF90007EF36D /* DannyAppIcon60.png */,
-				071B47FE1AACFF97007EF36D /* DannyAppIcon40.png */,
-				071B48001AACFFA3007EF36D /* DannyAppIcon29.png */,
 				21DB73B21A9156030062E9A9 /* Student.jpg */,
 			);
 			name = Images;
@@ -158,6 +157,7 @@
 				B4617C551A7AECA9001D2818 /* Main.storyboard */,
 				B4617C581A7AECA9001D2818 /* Images.xcassets */,
 				B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */,
+				071B48061AAD09E3007EF36D /* Launch ScreenGood.xib */,
 				B4617C4B1A7AECA9001D2818 /* Supporting Files */,
 			);
 			path = TutorAppCapstone;
@@ -270,15 +270,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071B48011AACFFA3007EF36D /* DannyAppIcon29.png in Resources */,
 				21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */,
 				B4617C571A7AECA9001D2818 /* Main.storyboard in Resources */,
 				071B48031AAD01B9007EF36D /* AppIcon58x58.png in Resources */,
-				071B47FD1AACFF90007EF36D /* DannyAppIcon60.png in Resources */,
 				21DB73B31A9156030062E9A9 /* Student.jpg in Resources */,
 				B4617C5C1A7AECA9001D2818 /* LaunchScreen.xib in Resources */,
-				071B47FF1AACFF97007EF36D /* DannyAppIcon40.png in Resources */,
+				071B48051AAD06A2007EF36D /* LaunchScreen640x960.png in Resources */,
+				071B48071AAD09E3007EF36D /* Launch ScreenGood.xib in Resources */,
 				B4617C591A7AECA9001D2818 /* Images.xcassets in Resources */,
+				071B48091AAD0CA6007EF36D /* TutorUpLogo.png in Resources */,
 				071B47FB1AACFDEE007EF36D /* DannyAppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
