@@ -13,11 +13,12 @@
 
 @property (strong, nonatomic) NSArray *listItems;
 
-@property (strong, nonatomic) NSMutableArray *resultsArray;
+@property (strong, nonatomic) NSMutableArray *cellResults;
 
 @property(strong, nonatomic) NSString *test;
 
-
+@property(strong, nonatomic) NSString *fname;
+@property(strong, nonatomic) NSString *lname;
 
 
 
@@ -29,6 +30,7 @@
 
 
 @property IBOutlet UITableView *tableView;
+
 
 
 @end

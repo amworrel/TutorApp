@@ -10,6 +10,7 @@
 		219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C99A11AA5271900FD9656 /* StudentSearchViewController.m */; };
 		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
+		26E350CC1AAE1AF100A6AB9C /* CustomSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E350CB1AAE1AF100A6AB9C /* CustomSearchCell.m */; };
 		26E7E6001A9D2D6A00D9FB5B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */; };
 		26E7E6011A9D2D6A00D9FB5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */; };
 		B4617C4E1A7AECA9001D2818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C4D1A7AECA9001D2818 /* main.m */; };
@@ -42,6 +43,8 @@
 		219C99A11AA5271900FD9656 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
 		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
+		26E350CA1AAE1AF100A6AB9C /* CustomSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSearchCell.h; sourceTree = "<group>"; };
+		26E350CB1AAE1AF100A6AB9C /* CustomSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSearchCell.m; sourceTree = "<group>"; };
 		26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +143,8 @@
 				B49B47021A8D4ECF00A11413 /* TutorCreateViewController.m */,
 				219C99A01AA5271900FD9656 /* StudentSearchViewController.h */,
 				219C99A11AA5271900FD9656 /* StudentSearchViewController.m */,
+				26E350CA1AAE1AF100A6AB9C /* CustomSearchCell.h */,
+				26E350CB1AAE1AF100A6AB9C /* CustomSearchCell.m */,
 				B4617C551A7AECA9001D2818 /* Main.storyboard */,
 				B4617C581A7AECA9001D2818 /* Images.xcassets */,
 				B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */,
@@ -283,6 +288,7 @@
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
+				26E350CC1AAE1AF100A6AB9C /* CustomSearchCell.m in Sources */,
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B4617C4E1A7AECA9001D2818 /* main.m in Sources */,
 				B49B470F1A8D501800A11413 /* SelectionViewController.m in Sources */,
