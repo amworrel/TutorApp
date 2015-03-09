@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				21DB73B41A9156090062E9A9 /* Tutor.jpg */,
-				071B48081AAD0CA6007EF36D /* TutorUpLogo.png */,
 				071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */,
+				071B48081AAD0CA6007EF36D /* TutorUpLogo.png */,
 				071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */,
 				071B48021AAD01B9007EF36D /* AppIcon58x58.png */,
 				21DB73B21A9156030062E9A9 /* Student.jpg */,
