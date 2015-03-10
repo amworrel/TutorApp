@@ -13,7 +13,8 @@
 
 @property (strong, nonatomic) NSArray *listItems;
 
-@property (strong, nonatomic) NSMutableArray *resultsArray;
+@property (strong, nonatomic) NSMutableArray *nameArray;
+@property (strong, nonatomic) NSMutableArray *courseArray;
 
 @property(strong, nonatomic) NSString *test;
 
