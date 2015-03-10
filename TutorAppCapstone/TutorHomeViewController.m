@@ -7,6 +7,9 @@
 //
 
 #import "TutorHomeViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+
+
 
 @interface TutorHomeViewController ()
 
@@ -17,6 +20,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.tutorHomeFirst.text = [result objectForKey:@"first_name"];
+        self.tutorHomeLast.text = [result objectForKey:@"last_name"];
+        self.facebookID = [result objectForKey:@"id"];
+        self.picture.profileID = _facebookID;
+        
+    }];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
