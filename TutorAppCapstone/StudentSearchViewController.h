@@ -23,6 +23,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *searchText;
+@property(strong, nonatomic) NSMutableArray *nameArray;
+@property(strong, nonatomic) NSMutableArray *courseArray;
 
 
 - (IBAction)submitSearch:(id)sender;

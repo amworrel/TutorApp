@@ -21,8 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-     self.cellResults = [[NSMutableArray alloc] init];
-    
+    self.nameArray = [[NSMutableArray alloc] init];
+    self.courseArray = [[NSMutableArray alloc] init];
     
     
     //[self.listItems addObject:@"One"];
@@ -38,23 +38,26 @@
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.cellResults count];
-    
+    return [self.nameArray count];
+    return [self.courseArray count];
 }
 
--(CustomSearchCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CustomSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    //cell.firstLabel.text = [_results.fname];
-    //cell.lastLabel.text = [_results.lname];
+    NSString *SimpleIdentifier = @"SimpleIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SimpleIdentifier];
+   
     
     
     
     if (cell == nil) {
-        cell = [[CustomSearchCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSLocaleIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SimpleIdentifier];
     }
     
-    cell.textLabel.text = self.cellResults[indexPath.row];
+        cell.textLabel.text = self.nameArray[indexPath.row];
+        cell.detailTextLabel.text = self.courseArray[indexPath.row];
+    
     
     return cell;
     
@@ -135,8 +138,15 @@
             NSLog(@"last: %@", lname);
             NSLog(@"courseCode: %@",courseCode);
             NSLog(@"courseID: %@", courseID);
-            
+            NSString *tempCourse = [courseCode stringByAppendingString:@"-"];
+            NSString *wholeCourse = [tempCourse stringByAppendingString:courseID];
+            NSString *tempName = [fname stringByAppendingString:@" "];
+            NSString *wholeName = [tempName stringByAppendingString:lname];
+            [self.nameArray addObject:wholeName];
+            [self.courseArray addObject:wholeCourse];
         }
+    NSLog(@"firstArray: %@", self.nameArray);
+    NSLog(@"firstArray: %@", self.courseArray);
 
 
     
