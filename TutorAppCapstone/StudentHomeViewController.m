@@ -47,15 +47,69 @@
         self.facebookID = [result objectForKey:@"id"];
         self.studentHomeFirst.text = [result objectForKey:@"first_name"];
         self.studentHomeLast.text = [result objectForKey:@"last_name"];
-        self.facebookID = [result objectForKey:@"id"];
+        
         self.picture.profileID = _facebookID;
     
+        
+        NSInteger success = 0;
+        
+        
+        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@", self.facebookID.self];
+        
+        
+        NSLog(@"PostData: %@", post);
+        
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_home.php"];
+        
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        
+        NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:url];
+        [request setHTTPMethod:@"POST"];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [request setHTTPBody:postData];
+        
+        NSLog(@"URLRequest: %@", request);
+        
+        NSError *error = [[NSError alloc] init];
+        NSHTTPURLResponse *response = nil;
+        NSData *urlData=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        
+        NSLog(@"Response code: %ld", (long)[response statusCode]);
+        
+        NSString *stringData = [[NSString alloc]initWithData:urlData encoding:NSUTF8StringEncoding];
+        NSLog(@"StringResponse ==> %@", stringData);
+        
+        NSMutableData *responseData = [[NSMutableData alloc] initWithData:urlData];
+        NSLog(@"Response ==> %@", responseData);
+        
+        NSDictionary *jsonData = [NSJSONSerialization
+                                  JSONObjectWithData:responseData
+                                  options:NSJSONReadingMutableLeaves
+                                  error:&error];
+        
+        
+        
+        NSArray *results = [jsonData valueForKeyPath:@"resultArray"];
+        NSLog(@"Results %@", results);
+        
+        for (NSDictionary *result in jsonData) {
+            self.studentHomeFirst.text = [result objectForKey:@"fname"];
+            self.studentHomeLast.text = [result objectForKey:@"lname"];
+            self.studentHomeUniversity.text = [result objectForKey:@"university"];
+            self.studentYear.text=[result objectForKey:@"year"];
+        
+            NSLog(@"first: %@", self.studentHomeFirst.text);
+        }
+        
     }];
     
     
     
 }
-
 
 
 

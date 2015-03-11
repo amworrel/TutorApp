@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSMutableArray *nameArray;
 @property (strong, nonatomic) NSMutableArray *courseArray;
-
+@property (strong, nonatomic) NSMutableArray *idArray;
 @property(strong, nonatomic) NSString *test;
 
 

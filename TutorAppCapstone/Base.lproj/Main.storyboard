@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Av8-4X-HPB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Av8-4X-HPB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Student Create View Controller-->
@@ -75,7 +75,7 @@
                                 </state>
                                 <connections>
                                     <action selector="studentCreateSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gt0-bz-yRF"/>
-                                    <segue destination="caa-hd-9eF" kind="modal" id="DS0-Sm-7Eb"/>
+                                    <segue destination="Xeh-nb-w4x" kind="modal" id="7b3-We-c6k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Llg-36-QJc">
@@ -142,6 +142,23 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-467.5" y="1659.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iTL-3G-Z0S">
+            <objects>
+                <viewController id="Xeh-nb-w4x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AbW-OQ-wRV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="caa-hd-9eF" kind="modal" identifier="StudentHome" id="IU2-QU-EgW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUf-3w-2zF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="2386"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B7z-08-rB0">
@@ -898,10 +915,10 @@
             </objects>
             <point key="canvasLocation" x="722.5" y="2419.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutor Profile View Controller-->
         <scene sceneID="vMk-cP-xAn">
             <objects>
-                <viewController id="adD-pG-auv" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="adD-pG-auv" customClass="TutorProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yn9-dm-x2L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1116,7 +1133,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oZF-YO-Ut4">
                                 <rect key="frame" x="280" y="103" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -1203,7 +1220,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2jd-j0-5CV">
                                 <rect key="frame" x="272" y="89" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -1507,7 +1524,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0LM-dD-ryi">
                                 <rect key="frame" x="277" y="94" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;">
+                                <state key="normal" title=">">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -2410,14 +2427,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xfb-0G-ClX"/>
-        <segue reference="Q50-U1-fkL"/>
         <segue reference="CAM-Y4-VC6"/>
+        <segue reference="Q50-U1-fkL"/>
+        <segue reference="nV4-iP-TSm"/>
         <segue reference="4hm-Fc-7nq"/>
-        <segue reference="O15-xP-9Tc"/>
-        <segue reference="sAZ-Lf-cQ3"/>
-        <segue reference="IL7-Hv-B4h"/>
+        <segue reference="Brb-5W-cdl"/>
         <segue reference="fsW-Dq-QpF"/>
+        <segue reference="H23-1a-bea"/>
+        <segue reference="sAZ-Lf-cQ3"/>
         <segue reference="BqC-mZ-mge"/>
     </inferredMetricsTieBreakers>
 </document>

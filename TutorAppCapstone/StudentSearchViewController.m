@@ -7,6 +7,7 @@
 //
 
 #import "StudentSearchViewController.h"
+#import "TutorProfileViewController.h"
 
 
 @interface StudentSearchViewController ()
@@ -23,6 +24,7 @@
     
     self.nameArray = [[NSMutableArray alloc] init];
     self.courseArray = [[NSMutableArray alloc] init];
+    self.idArray = [[NSMutableArray alloc] init];
     
     
     //[self.listItems addObject:@"One"];
@@ -65,8 +67,13 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TutorProfileViewController *TPVC = [[TutorProfileViewController alloc]init];
     // Perform segue to candy detail
+    
+    TPVC.tutorID = self.idArray[indexPath];
+    
     [self performSegueWithIdentifier:@"tutorDetail" sender:tableView];
+    
 }
 
 
@@ -114,16 +121,7 @@
                               JSONObjectWithData:responseData
                               options:NSJSONReadingMutableLeaves
                               error:&error];
-    //
-    //    for(id key in jsonData) {
-    //        id value = [jsonData objectForKey:key];
-    //
-    //        NSString *keyAsString = (NSString *)key;
-    //        NSString *valueAsString = (NSString *)value;
-    //
-    //        NSLog(@"key: %@", keyAsString);
-    //        NSLog(@"value: %@", valueAsString);
-    //    }
+ 
     
     
     NSArray *results = [jsonData valueForKeyPath:@"resultArray"];
@@ -134,6 +132,7 @@
         NSString *lname = [result objectForKey:@"lname"];
         NSString *courseCode = [result objectForKey:@"courseCode"];
         NSString *courseID = [result objectForKey:@"courseID"];
+        NSString *tutorID  = [result objectForKey:@"tutorAcctID"];
         NSLog(@"first: %@", fname);
         NSLog(@"last: %@", lname);
         NSLog(@"courseCode: %@",courseCode);
@@ -144,71 +143,12 @@
         NSString *wholeName = [tempName stringByAppendingString:lname];
         [self.nameArray addObject:wholeName];
         [self.courseArray addObject:wholeCourse];
+        [self.idArray addObject:tutorID];
     }
     NSLog(@"firstArray: %@", self.nameArray);
     NSLog(@"firstArray: %@", self.courseArray);
+    NSLog(@"ID %@", self.idArray);
     
-    
-    
-    //NSLog(@"Success: %ld", (long)success);
-    
-    //NSLog(@"Json Data", jsonData);
-    
-    
-    //    NSString *stringW = [responseData stringByReplacingOccurrencesOfString:@"\"" withString:@"" options:NSCaseInsensitiveSearch range:(NSRange){0,[responseData length]}];
-    //
-    //    NSString *newString =[stringW stringByReplacingOccurrencesOfString:@"{CONCAT(t.fname,' ',t.lname)" withString:@""];
-    //
-    //     NSString *finalString =[newString stringByReplacingOccurrencesOfString:@"}" withString:@""];
-    //
-    //    NSMutableArray *resultsArray = [finalString componentsSeparatedByString:@":"];
-    //
-    
-    /* NSInteger count = [resultsArray count];
-     for (id obj in resultsArray){
-     
-     if ([obj isEqualToString:@""]) {
-     [resultsArray removeObjectAtIndex:];
-     }
-     }
-     */
-    
-    
-    //success = [jsonData[@"success"] integerValue];
-    
-    
-    
-    //NSString *resultString= [responseData componentsSeparatedByString:@":"];
-    
-    
-    //NSMutableArray *resultsArray = [responseData componentsSeparatedByString:@":"];
-    
-    //NSString *resultsString = [resultsArray componentsJoinedByString:@":"];
-    
-    
-    
-    
-    
-    
-    //for (id obj in resultsArray)
-    //[self.resultsArray addObject:obj];
-    
-    
-    
-    //for (i = 0; i < [resultsArray count]; i++ )
-    //id resultsArrayElement = [resultsArray ]
-    //if(i % 2)!= 0{
-    // [self.resultsArray addObject:obj];
-    // }
-    
-    //for (id obj in resultsArray)
-    //NSLog(@"obj: %@", obj);
-    
-    
-    //self.test = JSON.parse(jsonData);
-    
-    
-    //var obj = responseData.parseJSON('{"fname": "Amy"}');
     
     
     return [self.tableView reloadData];
