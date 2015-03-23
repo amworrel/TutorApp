@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071B357E1AC0CBC40090D40F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071B357D1AC0CBC30090D40F /* Main.storyboard */; };
 		071B47FB1AACFDEE007EF36D /* DannyAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */; };
 		071B48031AAD01B9007EF36D /* AppIcon58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48021AAD01B9007EF36D /* AppIcon58x58.png */; };
 		071B48051AAD06A2007EF36D /* LaunchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */; };
@@ -24,7 +25,6 @@
 		B4617C5C1A7AECA9001D2818 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */; };
 		B4617C681A7AECA9001D2818 /* TutorAppCapstoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C671A7AECA9001D2818 /* TutorAppCapstoneTests.m */; };
 		B481FD611AB0E4360013471C /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B481FD601AB0E4360013471C /* LoadingViewController.m */; };
-		B481FD641AB0E5650013471C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B481FD621AB0E5650013471C /* Main.storyboard */; };
 		B481FD671AB0ED1C0013471C /* TutorProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B481FD661AB0ED1C0013471C /* TutorProfileViewController.m */; };
 		B49B47001A8D436800A11413 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49B46FF1A8D436800A11413 /* FacebookSDK.framework */; };
 		B49B47031A8D4ECF00A11413 /* TutorCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B47021A8D4ECF00A11413 /* TutorCreateViewController.m */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071B357D1AC0CBC30090D40F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		071B47FA1AACFDEE007EF36D /* DannyAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DannyAppIcon.png; sourceTree = "<group>"; };
 		071B48021AAD01B9007EF36D /* AppIcon58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon58x58.png; sourceTree = "<group>"; };
 		071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen640x960.png; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 		B4617C671A7AECA9001D2818 /* TutorAppCapstoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorAppCapstoneTests.m; sourceTree = "<group>"; };
 		B481FD5F1AB0E4360013471C /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		B481FD601AB0E4360013471C /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
-		B481FD631AB0E5650013471C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B481FD651AB0ED1C0013471C /* TutorProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorProfileViewController.h; sourceTree = "<group>"; };
 		B481FD661AB0ED1C0013471C /* TutorProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorProfileViewController.m; sourceTree = "<group>"; };
 		B49B46FF1A8D436800A11413 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = TutorAppCapstone/FacebookSDK.framework; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				219C99A11AA5271900FD9656 /* StudentSearchViewController.m */,
 				B481FD5F1AB0E4360013471C /* LoadingViewController.h */,
 				B481FD601AB0E4360013471C /* LoadingViewController.m */,
-				B481FD621AB0E5650013471C /* Main.storyboard */,
+				071B357D1AC0CBC30090D40F /* Main.storyboard */,
 				B4617C581A7AECA9001D2818 /* Images.xcassets */,
 				071B480A1AAD0E18007EF36D /* Launch ScreenGood.xib */,
 				B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */,
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */,
-				B481FD641AB0E5650013471C /* Main.storyboard in Resources */,
+				071B357E1AC0CBC40090D40F /* Main.storyboard in Resources */,
 				071B48031AAD01B9007EF36D /* AppIcon58x58.png in Resources */,
 				21DB73B31A9156030062E9A9 /* Student.jpg in Resources */,
 				071B480B1AAD0E18007EF36D /* Launch ScreenGood.xib in Resources */,
@@ -346,14 +346,6 @@
 				B4617C5B1A7AECA9001D2818 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		B481FD621AB0E5650013471C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B481FD631AB0E5650013471C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

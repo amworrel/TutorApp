@@ -70,7 +70,7 @@
     TutorProfileViewController *TPVC = [[TutorProfileViewController alloc]init];
     // Perform segue to candy detail
     
-    TPVC.tutorID = self.idArray[indexPath];
+    //TPVC.tutorID = self.idArray[indexPath];
     
     [self performSegueWithIdentifier:@"tutorDetail" sender:tableView];
     
