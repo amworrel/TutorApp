@@ -80,6 +80,14 @@
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"tutorDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TutorProfileViewController *destViewController = segue.destinationViewController;
+        destViewController.tutorID = self.idArray;
+    }
+}
+
 
 
 

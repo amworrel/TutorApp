@@ -18,9 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.sendTutor.text = self.tutorID;
     
-    NSLog(@"ID: %@", self.sendTutor.text);
+    
+    NSLog(@"ID: %@", self.tutorID);
     
     NSInteger success = 0;
     

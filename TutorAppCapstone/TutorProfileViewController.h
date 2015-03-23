@@ -10,7 +10,7 @@
 
 @interface TutorProfileViewController : UIViewController
 
-@property (weak, nonatomic)IBOutlet NSString *tutorID;
+@property (weak, nonatomic)IBOutlet NSMutableArray *tutorID;
 
 @property (weak, nonatomic)IBOutlet UILabel *sendTutor;
 
