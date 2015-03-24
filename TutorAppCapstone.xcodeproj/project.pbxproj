@@ -13,6 +13,8 @@
 		071B48051AAD06A2007EF36D /* LaunchScreen640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */; };
 		071B48091AAD0CA6007EF36D /* TutorUpLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 071B48081AAD0CA6007EF36D /* TutorUpLogo.png */; };
 		071B480B1AAD0E18007EF36D /* Launch ScreenGood.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071B480A1AAD0E18007EF36D /* Launch ScreenGood.xib */; };
+		0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B5E91AC1EC6A00D6509E /* UpdateAvailabilityViewController.m */; };
+		0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */; };
 		219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C99A11AA5271900FD9656 /* StudentSearchViewController.m */; };
 		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
@@ -51,6 +53,10 @@
 		071B48041AAD06A2007EF36D /* LaunchScreen640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen640x960.png; sourceTree = "<group>"; };
 		071B48081AAD0CA6007EF36D /* TutorUpLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TutorUpLogo.png; sourceTree = "<group>"; };
 		071B480A1AAD0E18007EF36D /* Launch ScreenGood.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch ScreenGood.xib"; sourceTree = "<group>"; };
+		0795B5E81AC1EC6A00D6509E /* UpdateAvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAvailabilityViewController.h; sourceTree = "<group>"; };
+		0795B5E91AC1EC6A00D6509E /* UpdateAvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAvailabilityViewController.m; sourceTree = "<group>"; };
+		0795B5EB1AC1ECAE00D6509E /* AddAvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAvailabilityViewController.h; sourceTree = "<group>"; };
+		0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAvailabilityViewController.m; sourceTree = "<group>"; };
 		219C99A01AA5271900FD9656 /* StudentSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSearchViewController.h; sourceTree = "<group>"; };
 		219C99A11AA5271900FD9656 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
@@ -165,6 +171,10 @@
 				B481FD5F1AB0E4360013471C /* LoadingViewController.h */,
 				B481FD601AB0E4360013471C /* LoadingViewController.m */,
 				071B357D1AC0CBC30090D40F /* Main.storyboard */,
+				0795B5EB1AC1ECAE00D6509E /* AddAvailabilityViewController.h */,
+				0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */,
+				0795B5E81AC1EC6A00D6509E /* UpdateAvailabilityViewController.h */,
+				0795B5E91AC1EC6A00D6509E /* UpdateAvailabilityViewController.m */,
 				B4617C581A7AECA9001D2818 /* Images.xcassets */,
 				071B480A1AAD0E18007EF36D /* Launch ScreenGood.xib */,
 				B4617C5A1A7AECA9001D2818 /* LaunchScreen.xib */,
@@ -312,7 +322,9 @@
 				219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */,
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
+				0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */,
 				B481FD671AB0ED1C0013471C /* TutorProfileViewController.m in Sources */,
+				0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B481FD611AB0E4360013471C /* LoadingViewController.m in Sources */,
