@@ -71,7 +71,7 @@
     // Perform segue to candy detail
     
     TPVC.tutorID = self.idArray[indexPath.row];
-    NSLog(@"IDArray %@", TPVC.tutorID);
+    //NSLog(@"IDArray %@", TPVC.tutorID);
     
 
     
@@ -79,6 +79,13 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"tutorDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TutorProfileViewController *destViewController = segue.destinationViewController;
+        destViewController.tutorID = self.idArray[indexPath.row];
+    }
+}
 
 
 

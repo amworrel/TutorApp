@@ -10,6 +10,30 @@
 
 @interface TutorProfileViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet NSMutableArray *tutorID;
+@property (weak, nonatomic) NSMutableArray *tutorID;
+
+@property (weak, nonatomic)IBOutlet UILabel *sendTutor;
+
+@property (weak, nonatomic)IBOutlet UILabel *tutorProfileFirst;
+
+@property(weak, nonatomic) IBOutlet UILabel *tutorProfileLast;
+
+@property(weak, nonatomic) IBOutlet UILabel *tutorProfileUniversity;
+
+@property(weak, nonatomic) IBOutlet UILabel *tutorProfileYear;
+
+@property(weak, nonatomic)IBOutlet UILabel *tutorProfileCourse;
+
+@property(weak, nonatomic)IBOutlet UILabel *tutorProfileCode;
+
+@property(strong, nonatomic)NSMutableArray *dateArray;
+
+@property(strong, nonatomic)NSMutableArray *timeArray;
+
+@property(strong, nonatomic)NSMutableArray *apptIDArray;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
 
 @end

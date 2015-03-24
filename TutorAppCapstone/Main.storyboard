@@ -896,8 +896,7 @@
                         <outlet property="searchDisplayController" destination="fZt-Nt-ED2" id="UXT-H9-sHz"/>
                         <outlet property="searchText" destination="wpk-vQ-RVd" id="70w-hD-4CO"/>
                         <outlet property="tableView" destination="8Ro-K6-Nyf" id="POX-ca-MCr"/>
-                        <segue destination="adD-pG-auv" kind="modal" identifier="tutorDetail" id="fsW-Dq-QpF"/>
-                        <segue destination="adD-pG-auv" kind="modal" identifier="tutorDetail" id="4WU-UP-zov"/>
+                        <segue destination="adD-pG-auv" kind="modal" identifier="tutorDetail" id="fh9-UA-mdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYP-4c-u7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -926,12 +925,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="722.5" y="2419.5"/>
+            <point key="canvasLocation" x="636.5" y="2421.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutor Profile View Controller-->
         <scene sceneID="vMk-cP-xAn">
             <objects>
-                <viewController id="adD-pG-auv" sceneMemberID="viewController">
+                <viewController id="adD-pG-auv" customClass="TutorProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yn9-dm-x2L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1082,10 +1081,13 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="961-Sb-G35" id="K7c-WP-wuj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2A3-bt-5QM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634.5" y="2377.5"/>
+            <point key="canvasLocation" x="1608.5" y="2357.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fJ6-bm-Ytw">
@@ -2527,14 +2529,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9Gg-kA-WK1"/>
         <segue reference="sAZ-Lf-cQ3"/>
-        <segue reference="vty-AB-Kqw"/>
-        <segue reference="IL7-Hv-B4h"/>
-        <segue reference="kFx-Jx-zHD"/>
-        <segue reference="xzW-8c-7B1"/>
-        <segue reference="Rdy-bx-sNy"/>
+        <segue reference="Brb-5W-cdl"/>
+        <segue reference="fh9-UA-mdB"/>
+        <segue reference="H23-1a-bea"/>
+        <segue reference="9Gg-kA-WK1"/>
         <segue reference="A6y-L8-qHp"/>
-        <segue reference="s6K-3L-618"/>
+        <segue reference="Rdy-bx-sNy"/>
+        <segue reference="xzW-8c-7B1"/>
+        <segue reference="kFx-Jx-zHD"/>
     </inferredMetricsTieBreakers>
 </document>
