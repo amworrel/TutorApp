@@ -10,6 +10,6 @@
 
 @interface TutorProfileViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet NSString *tutorID;
+@property (weak, nonatomic) IBOutlet NSMutableArray *tutorID;
 
 @end

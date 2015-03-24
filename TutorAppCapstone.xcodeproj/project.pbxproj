@@ -15,7 +15,6 @@
 		071B480B1AAD0E18007EF36D /* Launch ScreenGood.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071B480A1AAD0E18007EF36D /* Launch ScreenGood.xib */; };
 		0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B5E91AC1EC6A00D6509E /* UpdateAvailabilityViewController.m */; };
 		0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */; };
-		219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C99A11AA5271900FD9656 /* StudentSearchViewController.m */; };
 		21DB73B31A9156030062E9A9 /* Student.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B21A9156030062E9A9 /* Student.jpg */; };
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
 		26E7E6001A9D2D6A00D9FB5B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */; };
@@ -34,6 +33,7 @@
 		B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B470B1A8D4F2000A11413 /* TutorHomeViewController.m */; };
 		B49B470F1A8D501800A11413 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B470E1A8D501800A11413 /* SelectionViewController.m */; };
 		B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49B47111A8D503200A11413 /* StudentCreateViewController.m */; };
+		B4CEA16A1AC1F962004133D3 /* StudentSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CEA1691AC1F962004133D3 /* StudentSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,6 @@
 		0795B5E91AC1EC6A00D6509E /* UpdateAvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAvailabilityViewController.m; sourceTree = "<group>"; };
 		0795B5EB1AC1ECAE00D6509E /* AddAvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAvailabilityViewController.h; sourceTree = "<group>"; };
 		0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAvailabilityViewController.m; sourceTree = "<group>"; };
-		219C99A01AA5271900FD9656 /* StudentSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSearchViewController.h; sourceTree = "<group>"; };
-		219C99A11AA5271900FD9656 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 		21DB73B21A9156030062E9A9 /* Student.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Student.jpg; path = TutorAppCapstone/Student.jpg; sourceTree = SOURCE_ROOT; };
 		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
 		26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +88,8 @@
 		B49B470E1A8D501800A11413 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		B49B47101A8D503200A11413 /* StudentCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentCreateViewController.h; sourceTree = "<group>"; };
 		B49B47111A8D503200A11413 /* StudentCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCreateViewController.m; sourceTree = "<group>"; };
+		B4CEA1681AC1F962004133D3 /* StudentSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentSearchViewController.h; sourceTree = "<group>"; };
+		B4CEA1691AC1F962004133D3 /* StudentSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentSearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,8 @@
 				B481FD661AB0ED1C0013471C /* TutorProfileViewController.m */,
 				B49B47011A8D4ECF00A11413 /* TutorCreateViewController.h */,
 				B49B47021A8D4ECF00A11413 /* TutorCreateViewController.m */,
-				219C99A01AA5271900FD9656 /* StudentSearchViewController.h */,
-				219C99A11AA5271900FD9656 /* StudentSearchViewController.m */,
+				B4CEA1681AC1F962004133D3 /* StudentSearchViewController.h */,
+				B4CEA1691AC1F962004133D3 /* StudentSearchViewController.m */,
 				B481FD5F1AB0E4360013471C /* LoadingViewController.h */,
 				B481FD601AB0E4360013471C /* LoadingViewController.m */,
 				071B357D1AC0CBC30090D40F /* Main.storyboard */,
@@ -319,7 +319,6 @@
 			files = (
 				B49B47031A8D4ECF00A11413 /* TutorCreateViewController.m in Sources */,
 				B49B47091A8D4F1400A11413 /* StudentHomeViewController.m in Sources */,
-				219C99A21AA5271900FD9656 /* StudentSearchViewController.m in Sources */,
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */,
@@ -329,6 +328,7 @@
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B481FD611AB0E4360013471C /* LoadingViewController.m in Sources */,
 				B4617C4E1A7AECA9001D2818 /* main.m in Sources */,
+				B4CEA16A1AC1F962004133D3 /* StudentSearchViewController.m in Sources */,
 				B49B470F1A8D501800A11413 /* SelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
