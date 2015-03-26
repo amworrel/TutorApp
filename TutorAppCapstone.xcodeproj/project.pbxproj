@@ -19,6 +19,7 @@
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
 		26E7E6001A9D2D6A00D9FB5B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */; };
 		26E7E6011A9D2D6A00D9FB5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */; };
+		B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */; };
 		B4617C4E1A7AECA9001D2818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C4D1A7AECA9001D2818 /* main.m */; };
 		B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C501A7AECA9001D2818 /* AppDelegate.m */; };
 		B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C531A7AECA9001D2818 /* LogInViewController.m */; };
@@ -62,6 +63,8 @@
 		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
 		26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B44E15E41AC47B4200D67D1D /* TutorConfirmedApptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorConfirmedApptsViewController.h; sourceTree = "<group>"; };
+		B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorConfirmedApptsViewController.m; sourceTree = "<group>"; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4617C4C1A7AECA9001D2818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4617C4D1A7AECA9001D2818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				B4CEA16E1AC1FAE7004133D3 /* ConfirmApptViewController.h */,
 				B4CEA16F1AC1FAE7004133D3 /* ConfirmApptViewController.m */,
 				071B357D1AC0CBC30090D40F /* Main.storyboard */,
+				B44E15E41AC47B4200D67D1D /* TutorConfirmedApptsViewController.h */,
+				B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */,
 				0795B5EB1AC1ECAE00D6509E /* AddAvailabilityViewController.h */,
 				0795B5EC1AC1ECAE00D6509E /* AddAvailabilityViewController.m */,
 				0795B5E81AC1EC6A00D6509E /* UpdateAvailabilityViewController.h */,
@@ -329,6 +334,7 @@
 				B4CEA1701AC1FAE7004133D3 /* ConfirmApptViewController.m in Sources */,
 				0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */,
 				0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */,
+				B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B481FD611AB0E4360013471C /* LoadingViewController.m in Sources */,

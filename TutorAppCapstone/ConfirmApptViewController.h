@@ -13,4 +13,16 @@
 
 @property (weak, nonatomic)IBOutlet NSMutableArray *apptID;
 
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorFirst;
+
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorLast;
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorDate;
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorLocation;
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorRate;
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorDetails;
+@property (weak, nonatomic) IBOutlet UILabel *confirmTutorTime;
+@property(weak, nonatomic) IBOutlet NSString *facebookID;
+
+- (IBAction)sendStudentID:(id)sender;
+
 @end

@@ -84,12 +84,12 @@
     NSInteger success = 0;
     
     
-    NSString *post = [[NSString alloc] initWithFormat:@"tutorID=%@&addDate=%@&addStart=%@&addEnd=%@&addLocation=%@&addRate=%@&addDetails=%@", self.facebookID.self, finalDate, finalStart, finalEnd, [self.addLocation text], [self.addRate text], [self.addDetails text]];
+    NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&date=%@&startTime=%@&endTime=%@&location=%@&rate=%@&details=%@", self.facebookID.self, finalDate, finalStart, finalEnd, [self.addLocation text], [self.addRate text], [self.addDetails text]];
     
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_avail.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
