@@ -36,7 +36,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *addDetails;
 
+@property (weak, nonatomic) IBOutlet NSString *facebookID;
 
+
+
+- (IBAction)addAppt:(id)sender;
 
 
 @end

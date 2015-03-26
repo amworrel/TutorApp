@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TutorProfileViewController : UIViewController
+@interface TutorProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) NSMutableArray *tutorID;
 
-@property (weak, nonatomic)IBOutlet UILabel *sendTutor;
+
 
 @property (weak, nonatomic)IBOutlet UILabel *tutorProfileFirst;
 
@@ -24,7 +24,7 @@
 
 @property(weak, nonatomic)IBOutlet UILabel *tutorProfileCourse;
 
-@property(weak, nonatomic)IBOutlet UILabel *tutorProfileCode;
+
 
 @property(strong, nonatomic)NSMutableArray *dateArray;
 

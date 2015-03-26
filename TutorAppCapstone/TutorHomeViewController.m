@@ -7,6 +7,7 @@
 //
 
 #import "TutorHomeViewController.h"
+#import "UpdateAvailabilityViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 
@@ -41,9 +42,7 @@
         self.tutorHomeLast.text = [result objectForKey:@"last_name"];
         self.facebookID = [result objectForKey:@"id"];
         self.picture.profileID = _facebookID;
-        
     }];
-    
     
 }
 
@@ -61,5 +60,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -81,8 +81,7 @@
         self.tutorProfileLast.text = [result objectForKey:@"lname"];
         self.tutorProfileUniversity.text = [result objectForKey:@"university"];
         self.tutorProfileYear.text=[result objectForKey:@"year"];
-        self.tutorProfileCourse.text =[result objectForKey:@"courseCode"];
-        self.tutorProfileCode.text = [result objectForKey:@"courseID"];
+
         
         NSLog(@"first: %@", self.tutorProfileFirst.text);
     }
@@ -97,13 +96,13 @@
     NSURL *apptUrl =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_select_tutor_appts.php"];
     
     NSMutableURLRequest *appointmentRequest = [[NSMutableURLRequest alloc] init];
-    [request setURL:apptUrl];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setHTTPBody:postData];
+    [appointmentRequest setURL:apptUrl];
+    [appointmentRequest setHTTPMethod:@"POST"];
+    [appointmentRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [appointmentRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [appointmentRequest setHTTPBody:postData];
     
-    NSLog(@"URLRequest: %@", request);
+    NSLog(@"URLRequest: %@", appointmentRequest);
     
     NSError *apptError = [[NSError alloc] init];
     NSHTTPURLResponse *apptResponse = nil;
@@ -128,12 +127,20 @@
     NSLog(@"ApptResults %@", apptResults);
     
     for (NSDictionary *apptResult in apptJsonData) {
+        NSString *courseCode =[apptResult objectForKey:@"courseCode"];
+        NSString *courseID = [apptResult objectForKey:@"courseID"];
+        NSString *tempCourse = [courseCode stringByAppendingString:@"-"];
+        NSString *wholeCourse = [tempCourse stringByAppendingString:courseID];
+        self.tutorProfileCourse.text = wholeCourse;
+
         NSString *apptID = [apptResult objectForKey:@"apptID"];
         NSString *date= [apptResult objectForKey:@"date"];
         NSString *startTime = [apptResult objectForKey:@"startTime"];
         NSString *endTime = [apptResult objectForKey:@"endTime"];
         NSString *tempTime = [startTime stringByAppendingString:@"-"];
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
+        
+        
         [self.dateArray addObject:date];
         [self.timeArray addObject:finalTime];
         [self.apptIDArray addObject:apptID];
