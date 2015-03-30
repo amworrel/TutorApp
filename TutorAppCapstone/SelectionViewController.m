@@ -78,12 +78,12 @@
     NSInteger success = 0;
     
     
-    NSString *post = [[NSString alloc] initWithFormat:@"accountID=%@", self.facebookID.self];
+    NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@", self.facebookID.self];
     
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/post_insert_id.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/account_server2.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -114,17 +114,17 @@
     success = [jsonData[@"success"] integerValue];
     NSLog(@"Success: %ld", (long)success);
     
-        if (success ==1) {
+        if ([responseData  isEqual: @"4"]) {
             [self toggleNoProfile:YES];
         }
-        if (success ==2) {
+        if ([responseData isEqual: @"2"]) {
             [self toggleStudentProfile:YES];
         }
-        if (success ==3) {
+        if ([responseData  isEqual:@"3"]) {
             [self toggleTutorProfile:YES];
         }
         
-        if (success == 4) {
+        if ([responseData  isEqual: @"1"]) {
             [self toggleBothProfile:YES];
         }
         

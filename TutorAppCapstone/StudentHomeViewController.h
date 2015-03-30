@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface StudentHomeViewController : UIViewController
+@interface StudentHomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *studentHomeFirst;
 
@@ -26,5 +26,12 @@
 
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 
+@property(strong, nonatomic)IBOutlet NSMutableArray *dateArray;
+
+@property(strong, nonatomic)IBOutlet NSMutableArray *timeArray;
+
+@property(strong, nonatomic)IBOutlet NSMutableArray *apptIDArray;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

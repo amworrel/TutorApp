@@ -40,8 +40,6 @@
         NSLog(@"%@", [result objectForKey:@"id"]);
         NSLog(@"%@", [result objectForKey:@"first_name"]);
         NSLog(@"%@", [result objectForKey:@"last_name"]);
-        NSLog(@"%@", [result objectForKey:@"birthday"]);
-        NSLog(@"%@", [result objectForKey:@"email"]);
         NSLog(@"%@", [result objectForKey:@"picture"]);
         
         self.facebookID = [result objectForKey:@"id"];
