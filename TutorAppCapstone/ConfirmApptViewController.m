@@ -79,6 +79,26 @@
         
         NSLog(@"first: %@", self.confirmTutorFirst.text);
     }
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        
+        self.studentPicture.profileID = self.facebookID;
+        
+        
+    }];
+    
 
     
 }
@@ -119,6 +139,7 @@
         NSLog(@"%@", [result objectForKey:@"picture"]);
         
         self.facebookID = [result objectForKey:@"id"];
+        
         
         
         

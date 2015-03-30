@@ -9,6 +9,7 @@
 #import "TutorProfileViewController.h"
 #import "StudentSearchViewController.h"
 #import "ConfirmApptViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface TutorProfileViewController ()
 
@@ -26,6 +27,25 @@
     
     
     NSLog(@"ID: %@", self.tutorID);
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        
+        self.picture.profileID = self.tutorID;
+                        
+                                  
+    }];
     
     //
     //

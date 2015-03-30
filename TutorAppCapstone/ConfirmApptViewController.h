@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface ConfirmApptViewController : UIViewController
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *tutorPicture;
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *studentPicture;
 
 
 @property (weak, nonatomic)IBOutlet NSMutableArray *apptID;

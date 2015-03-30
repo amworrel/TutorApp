@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface TutorProfileViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) NSMutableArray *tutorID;
 
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
 
 
 @property (weak, nonatomic)IBOutlet UILabel *tutorProfileFirst;
