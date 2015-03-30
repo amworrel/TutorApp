@@ -14,10 +14,37 @@
 
 @interface SelectionViewController ()
 
+-(void)toggleNoProfile:(BOOL)shouldHide;
+
+-(void)toggleStudentProfile:(BOOL)shouldHide;
+
+-(void)toggleTutorProfile:(BOOL)shouldHide;
+
+-(void)toggleBothProfile:(BOOL)shouldHide;
+
 @end
 
 @implementation SelectionViewController
 
+-(void)toggleNoProfile:(BOOL)shouldHide {
+    self.enterStudentProfile.hidden =shouldHide;
+    self.enterTutorProfile.hidden = shouldHide;
+}
+
+-(void)toggleStudentProfile:(BOOL)shouldHide {
+    self.studentProfileButton.hidden = shouldHide;
+    self.enterTutorProfile.hidden = shouldHide;
+}
+
+-(void)toggleTutorProfile:(BOOL)shouldHide {
+    self.tutorProfileButton.hidden = shouldHide;
+    self.enterStudentProfile.hidden = shouldHide;
+}
+
+-(void)toggleBothProfile:(BOOL)shouldHide {
+    self.tutorProfileButton.hidden = shouldHide;
+    self.studentProfileButton.hidden = shouldHide;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -86,9 +113,25 @@
                               error:&error];
     success = [jsonData[@"success"] integerValue];
     NSLog(@"Success: %ld", (long)success);
-
     
+        if (success ==1) {
+            [self toggleNoProfile:YES];
+        }
+        if (success ==2) {
+            [self toggleStudentProfile:YES];
+        }
+        if (success ==3) {
+            [self toggleTutorProfile:YES];
+        }
+        
+        if (success == 4) {
+            [self toggleBothProfile:YES];
+        }
+        
+        
+
 }];
+    
     
 }
 

@@ -19,6 +19,10 @@
 
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 
+@property (weak, nonatomic) IBOutlet UIButton *studentProfileButton;
+@property (weak, nonatomic) IBOutlet UIButton *tutorProfileButton;
+@property (weak, nonatomic) IBOutlet UIButton *enterStudentProfile;
+@property (weak, nonatomic) IBOutlet UIButton *enterTutorProfile;
 
 
 
