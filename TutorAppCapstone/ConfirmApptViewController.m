@@ -126,7 +126,7 @@
     
 
     
-    NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@&studAcctID%@", self.apptID.self, self.facebookID.self];
+    NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@&studAcctID=%@", self.apptID.self, self.facebookID.self];
     
     
     NSLog(@"PostData: %@", post);

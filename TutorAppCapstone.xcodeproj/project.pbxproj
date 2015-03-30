@@ -37,6 +37,7 @@
 		B4CEA16D1AC1FACD004133D3 /* TutorProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CEA16C1AC1FACD004133D3 /* TutorProfileViewController.m */; };
 		B4CEA1701AC1FAE7004133D3 /* ConfirmApptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CEA16F1AC1FAE7004133D3 /* ConfirmApptViewController.m */; };
 		B4F1F07F1AC9E5AC006EE283 /* StudentViewAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F1F07E1AC9E5AC006EE283 /* StudentViewAllViewController.m */; };
+		B4F1F0821AC9F821006EE283 /* StudentApptDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F1F0811AC9F821006EE283 /* StudentApptDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		B4CEA16F1AC1FAE7004133D3 /* ConfirmApptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmApptViewController.m; sourceTree = "<group>"; };
 		B4F1F07D1AC9E5AC006EE283 /* StudentViewAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentViewAllViewController.h; sourceTree = "<group>"; };
 		B4F1F07E1AC9E5AC006EE283 /* StudentViewAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentViewAllViewController.m; sourceTree = "<group>"; };
+		B4F1F0801AC9F821006EE283 /* StudentApptDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentApptDetailsViewController.h; sourceTree = "<group>"; };
+		B4F1F0811AC9F821006EE283 /* StudentApptDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentApptDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				B4617C531A7AECA9001D2818 /* LogInViewController.m */,
 				B49B47071A8D4F1400A11413 /* StudentHomeViewController.h */,
 				B49B47081A8D4F1400A11413 /* StudentHomeViewController.m */,
+				B4F1F0801AC9F821006EE283 /* StudentApptDetailsViewController.h */,
+				B4F1F0811AC9F821006EE283 /* StudentApptDetailsViewController.m */,
 				B4F1F07D1AC9E5AC006EE283 /* StudentViewAllViewController.h */,
 				B4F1F07E1AC9E5AC006EE283 /* StudentViewAllViewController.m */,
 				B49B470D1A8D501800A11413 /* SelectionViewController.h */,
@@ -339,6 +344,7 @@
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				B4CEA1701AC1FAE7004133D3 /* ConfirmApptViewController.m in Sources */,
 				0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */,
+				B4F1F0821AC9F821006EE283 /* StudentApptDetailsViewController.m in Sources */,
 				0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */,
 				B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,

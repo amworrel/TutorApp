@@ -8,6 +8,7 @@
 
 #import "StudentHomeViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "StudentApptDetailsViewController.h"
 
 
 @interface StudentHomeViewController ()
@@ -222,6 +223,26 @@
     return cell;
     
     
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    StudentApptDetailsViewController *SADVC = [[StudentApptDetailsViewController alloc]init];
+    // Perform segue to candy detail
+    
+    SADVC.apptID = self.apptIDArray[indexPath.row];
+    NSLog(@"IDArray %@", SADVC.apptID);
+    
+    
+    
+    [self performSegueWithIdentifier:@"apptDetails" sender:tableView];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"apptDetails"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        StudentApptDetailsViewController *destViewController = segue.destinationViewController;
+        destViewController.apptID = self.apptIDArray[indexPath.row];
+    }
 }
 
 
