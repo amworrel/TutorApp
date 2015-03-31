@@ -19,6 +19,8 @@
 		21DB73B51A9156090062E9A9 /* Tutor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21DB73B41A9156090062E9A9 /* Tutor.jpg */; };
 		26E7E6001A9D2D6A00D9FB5B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */; };
 		26E7E6011A9D2D6A00D9FB5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */; };
+		26E927761ACB180500F09B88 /* UpdateTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E927751ACB180500F09B88 /* UpdateTutorViewController.m */; };
+		26E9277C1ACB1E5600F09B88 /* UpdateStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E9277B1ACB1E5600F09B88 /* UpdateStudentViewController.m */; };
 		B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */; };
 		B4617C4E1A7AECA9001D2818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C4D1A7AECA9001D2818 /* main.m */; };
 		B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C501A7AECA9001D2818 /* AppDelegate.m */; };
@@ -65,6 +67,10 @@
 		21DB73B41A9156090062E9A9 /* Tutor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Tutor.jpg; path = TutorAppCapstone/Tutor.jpg; sourceTree = SOURCE_ROOT; };
 		26E7E5FE1A9D2D6A00D9FB5B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		26E7E5FF1A9D2D6A00D9FB5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		26E927741ACB180500F09B88 /* UpdateTutorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateTutorViewController.h; sourceTree = "<group>"; };
+		26E927751ACB180500F09B88 /* UpdateTutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateTutorViewController.m; sourceTree = "<group>"; };
+		26E9277A1ACB1E5600F09B88 /* UpdateStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateStudentViewController.h; path = ../UpdateStudentViewController.h; sourceTree = "<group>"; };
+		26E9277B1ACB1E5600F09B88 /* UpdateStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateStudentViewController.m; path = ../UpdateStudentViewController.m; sourceTree = "<group>"; };
 		B44E15E41AC47B4200D67D1D /* TutorConfirmedApptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorConfirmedApptsViewController.h; sourceTree = "<group>"; };
 		B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorConfirmedApptsViewController.m; sourceTree = "<group>"; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,11 +174,15 @@
 				B4617C531A7AECA9001D2818 /* LogInViewController.m */,
 				B49B47071A8D4F1400A11413 /* StudentHomeViewController.h */,
 				B49B47081A8D4F1400A11413 /* StudentHomeViewController.m */,
+				26E9277A1ACB1E5600F09B88 /* UpdateStudentViewController.h */,
+				26E9277B1ACB1E5600F09B88 /* UpdateStudentViewController.m */,
 				B4F1F0801AC9F821006EE283 /* StudentApptDetailsViewController.h */,
 				B4F1F0811AC9F821006EE283 /* StudentApptDetailsViewController.m */,
 				B4F1F07D1AC9E5AC006EE283 /* StudentViewAllViewController.h */,
 				B4F1F07E1AC9E5AC006EE283 /* StudentViewAllViewController.m */,
 				B49B470D1A8D501800A11413 /* SelectionViewController.h */,
+				26E927741ACB180500F09B88 /* UpdateTutorViewController.h */,
+				26E927751ACB180500F09B88 /* UpdateTutorViewController.m */,
 				B49B470E1A8D501800A11413 /* SelectionViewController.m */,
 				B49B470A1A8D4F2000A11413 /* TutorHomeViewController.h */,
 				B49B470B1A8D4F2000A11413 /* TutorHomeViewController.m */,
@@ -347,7 +357,9 @@
 				B4F1F0821AC9F821006EE283 /* StudentApptDetailsViewController.m in Sources */,
 				0795B5EA1AC1EC6A00D6509E /* UpdateAvailabilityViewController.m in Sources */,
 				B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */,
+				26E927761ACB180500F09B88 /* UpdateTutorViewController.m in Sources */,
 				B49B470C1A8D4F2000A11413 /* TutorHomeViewController.m in Sources */,
+				26E9277C1ACB1E5600F09B88 /* UpdateStudentViewController.m in Sources */,
 				B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */,
 				B481FD611AB0E4360013471C /* LoadingViewController.m in Sources */,
 				B4617C4E1A7AECA9001D2818 /* main.m in Sources */,
