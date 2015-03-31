@@ -622,10 +622,10 @@
             </objects>
             <point key="canvasLocation" x="15.5" y="193.5"/>
         </scene>
-        <!--Update Student View Controller-->
+        <!--Student Update View Controller-->
         <scene sceneID="1qN-jd-8Ke">
             <objects>
-                <viewController id="4Jt-Ml-2G8" customClass="UpdateStudentViewController" sceneMemberID="viewController">
+                <viewController id="4Jt-Ml-2G8" customClass="StudentUpdateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MpL-7U-hdM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -673,58 +673,58 @@
                                     <segue destination="caa-hd-9eF" kind="modal" id="24s-JY-mtb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tdb-en-6Gg">
-                                <rect key="frame" x="213" y="509" width="86" height="43"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="SVS-S8-gh6">
+                                <rect key="frame" x="234" y="81" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Blh-mP-ipv">
+                                <rect key="frame" x="234" y="129" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cg4-XV-Mhq">
+                                <rect key="frame" x="169" y="242" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zBT-7h-fYW">
+                                <rect key="frame" x="169" y="299" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="AxM-kF-g6s">
+                                <rect key="frame" x="169" y="359" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qtg-hw-aPT">
+                                <rect key="frame" x="245" y="517" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="caa-hd-9eF" kind="modal" id="t9C-BK-MdS"/>
+                                    <action selector="updateStudent:" destination="4Jt-Ml-2G8" eventType="touchUpInside" id="myN-aK-62R"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="jao-Dl-C5w">
-                                <rect key="frame" x="220" y="88" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="gCa-1u-oZB">
-                                <rect key="frame" x="220" y="143" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Nrh-VE-fzH">
-                                <rect key="frame" x="188" y="242" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="vmS-9p-0y5">
-                                <rect key="frame" x="188" y="299" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="YnC-Qs-aQZ">
-                                <rect key="frame" x="188" y="363" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="updateStudentFirst" destination="jao-Dl-C5w" id="rgI-Ao-4K2"/>
-                        <outlet property="updateStudentLast" destination="gCa-1u-oZB" id="s3G-i4-Iyx"/>
-                        <outlet property="updateStudentMajor" destination="YnC-Qs-aQZ" id="Key-7J-Sng"/>
-                        <outlet property="updateStudentUniversity" destination="Nrh-VE-fzH" id="yix-Cc-3uI"/>
-                        <outlet property="updateStudentYear" destination="vmS-9p-0y5" id="hsh-ZW-jhq"/>
+                        <outlet property="updateStudentFirst" destination="SVS-S8-gh6" id="aw2-O6-l6I"/>
+                        <outlet property="updateStudentLast" destination="Blh-mP-ipv" id="sAm-SK-Af0"/>
+                        <outlet property="updateStudentMajor" destination="AxM-kF-g6s" id="NZE-6s-CN5"/>
+                        <outlet property="updateStudentUniversity" destination="cg4-XV-Mhq" id="2lM-t2-AvU"/>
+                        <outlet property="updateStudentYear" destination="zBT-7h-fYW" id="rb8-Gr-ryP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ylb-8c-JMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2488,10 +2488,10 @@
             </objects>
             <point key="canvasLocation" x="1045.5" y="151.5"/>
         </scene>
-        <!--Update Tutor View Controller-->
+        <!--Tutor Update View Controller-->
         <scene sceneID="F1j-L4-q7W">
             <objects>
-                <viewController id="GSc-km-B0l" customClass="UpdateTutorViewController" sceneMemberID="viewController">
+                <viewController id="GSc-km-B0l" customClass="TutorUpdateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ckf-bF-AwX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2520,30 +2520,6 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="brj-hJ-ceL">
-                                <rect key="frame" x="162" y="288" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="L4m-AT-IkM">
-                                <rect key="frame" x="162" y="326" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First" borderStyle="roundedRect" minimumFontSize="17" id="lHd-c1-bfy">
-                                <rect key="frame" x="193" y="132" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last" borderStyle="roundedRect" minimumFontSize="17" id="BLu-LT-kN1">
-                                <rect key="frame" x="193" y="170" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" id="keG-xi-Jru">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2551,17 +2527,6 @@
                                     <navigationItem title="Update Profile" id="xsb-Mf-TDx"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MvP-gS-jWz">
-                                <rect key="frame" x="162" y="519" width="51" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Update">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="updateTutor:" destination="GSc-km-B0l" eventType="touchUpInside" id="tZY-Wc-KYK"/>
-                                    <segue destination="djO-DV-8rc" kind="modal" id="bkG-LM-oX5"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1IY-4A-hO3">
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -2577,12 +2542,6 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="WUV-ED-aDL">
-                                <rect key="frame" x="162" y="250" width="198" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pk5-hi-FzA">
                                 <rect key="frame" x="258" y="373" width="7" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2590,31 +2549,72 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="uYK-YM-frb">
-                                <rect key="frame" x="285" y="370" width="74" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GQD-eX-uae">
+                                <rect key="frame" x="213" y="84" width="141" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Wih-Le-dBN">
-                                <rect key="frame" x="162" y="370" width="72" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="QLF-Zn-ML4">
+                                <rect key="frame" x="213" y="141" width="141" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="SQw-bW-FWS">
+                                <rect key="frame" x="181" y="250" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="e9P-NC-PJf">
+                                <rect key="frame" x="181" y="291" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="16x-ZY-X7m">
+                                <rect key="frame" x="181" y="330" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="1O8-BA-kk8">
+                                <rect key="frame" x="181" y="373" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Mh1-qj-9DO">
+                                <rect key="frame" x="273" y="373" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="id6-Gh-Zwb">
+                                <rect key="frame" x="179" y="515" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTutor:" destination="GSc-km-B0l" eventType="touchUpInside" id="oBE-oc-Bcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="updateTutorCourseCode" destination="Wih-Le-dBN" id="QmP-Oj-R2Z"/>
-                        <outlet property="updateTutorCourseID" destination="uYK-YM-frb" id="QNE-zH-MSn"/>
-                        <outlet property="updateTutorFirst" destination="lHd-c1-bfy" id="HTP-La-lx9"/>
-                        <outlet property="updateTutorLast" destination="BLu-LT-kN1" id="flR-Xj-aSu"/>
-                        <outlet property="updateTutorMajor" destination="L4m-AT-IkM" id="LWs-xG-PtG"/>
-                        <outlet property="updateTutorUniversity" destination="WUV-ED-aDL" id="BRQ-Ct-hel"/>
-                        <outlet property="updateTutorYear" destination="brj-hJ-ceL" id="YaW-np-xBb"/>
+                        <outlet property="updateTutorCourseCode" destination="1O8-BA-kk8" id="lDE-kQ-Qah"/>
+                        <outlet property="updateTutorCourseID" destination="Mh1-qj-9DO" id="sKC-c4-hUk"/>
+                        <outlet property="updateTutorFirst" destination="GQD-eX-uae" id="f9L-29-ut2"/>
+                        <outlet property="updateTutorLast" destination="QLF-Zn-ML4" id="adT-3g-L53"/>
+                        <outlet property="updateTutorMajor" destination="16x-ZY-X7m" id="Gfa-66-Tyf"/>
+                        <outlet property="updateTutorUniversity" destination="SQw-bW-FWS" id="QBQ-DJ-Xgx"/>
+                        <outlet property="updateTutorYear" destination="e9P-NC-PJf" id="Ao5-XX-xXP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7i-d9-tU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2636,13 +2636,13 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="JKj-cw-oEg"/>
-        <segue reference="bkG-LM-oX5"/>
-        <segue reference="CAM-Y4-VC6"/>
+        <segue reference="rf2-Pf-Kru"/>
         <segue reference="PvE-sI-lUM"/>
+        <segue reference="CAM-Y4-VC6"/>
         <segue reference="s6K-3L-618"/>
         <segue reference="H23-1a-bea"/>
-        <segue reference="o6v-UZ-Gqo"/>
-        <segue reference="t9C-BK-MdS"/>
+        <segue reference="BqC-mZ-mge"/>
         <segue reference="52Z-tS-Izn"/>
+        <segue reference="24s-JY-mtb"/>
     </inferredMetricsTieBreakers>
 </document>
