@@ -7,8 +7,12 @@
 //
 
 #import "UpdateStudentViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation UpdateStudentViewController
+-(void)viewDidLoad {
+    [super viewDidLoad];
+
 
 NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
 
@@ -78,10 +82,10 @@ NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_nam
         self.updateStudentYear.text = [result objectForKey:@"year"];
         
     }
-    NSLog(@"name:", self.updateStudentCourseID.text);
+    NSLog(@"name:", self.updateStudentFirst.text);
     
 }];
-
+}
 
 
 
