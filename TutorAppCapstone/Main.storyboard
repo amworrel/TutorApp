@@ -1431,7 +1431,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uNw-3Q-ek4" kind="modal" id="KwA-qq-HWP"/>
+                                    <action selector="review:" destination="Lka-Pt-lEr" eventType="touchUpInside" id="zDy-AS-TV5"/>
+                                    <segue destination="uNw-3Q-ek4" kind="modal" identifier="tutorReview" id="KwA-qq-HWP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDo-xP-6Od">
@@ -2131,22 +2132,14 @@
             </objects>
             <point key="canvasLocation" x="1902.5" y="2401.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Review Tutor View Controller-->
         <scene sceneID="ONg-yl-l4L">
             <objects>
-                <viewController id="uNw-3Q-ek4" sceneMemberID="viewController">
+                <viewController id="uNw-3Q-ek4" customClass="ReviewTutorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0mf-WW-UlA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutor Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0r-aE-4Tf">
-                                <rect key="frame" x="31" y="232" width="89" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Editible field for writing review" borderStyle="roundedRect" minimumFontSize="17" id="xn3-OG-sSH">
                                 <rect key="frame" x="12" y="360" width="350" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2168,16 +2161,8 @@
                                     <navigationItem title="Review" id="rTc-aV-fNQ"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutor.jpg" id="SWU-vT-6sa">
-                                <rect key="frame" x="16" y="95" width="118" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Student.jpg" id="ogC-0s-HW3">
-                                <rect key="frame" x="222" y="95" width="121" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofH-Vt-3xs">
-                                <rect key="frame" x="222" y="232" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofH-Vt-3xs">
+                                <rect key="frame" x="222" y="232" width="111" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2192,6 +2177,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitReview:" destination="uNw-3Q-ek4" eventType="touchUpInside" id="PQM-FP-s5X"/>
                                     <segue destination="Lka-Pt-lEr" kind="modal" id="BqC-mZ-mge"/>
                                 </connections>
                             </button>
@@ -2206,11 +2192,52 @@
                                     <segue destination="Lka-Pt-lEr" kind="modal" id="4YC-ir-uCp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8N4-wW-3ha">
+                                <rect key="frame" x="87" y="232" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dV9-II-dVx">
+                                <rect key="frame" x="301" y="232" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0r-aE-4Tf">
+                                <rect key="frame" x="16" y="232" width="89" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="pJ7-qS-gMw" customClass="FBProfilePictureView">
+                                <rect key="frame" x="213" y="80" width="127" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="owa-OP-yzd" customClass="FBProfilePictureView">
+                                <rect key="frame" x="22" y="80" width="127" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="reviewStudentFirst" destination="ofH-Vt-3xs" id="Rfn-Wc-cjZ"/>
+                        <outlet property="reviewStudentLast" destination="dV9-II-dVx" id="BWu-do-gM6"/>
+                        <outlet property="reviewText" destination="xn3-OG-sSH" id="7d3-lL-PSZ"/>
+                        <outlet property="reviewTutorFirst" destination="f0r-aE-4Tf" id="Irb-MS-0pR"/>
+                        <outlet property="reviewTutorLast" destination="8N4-wW-3ha" id="rSC-un-gHT"/>
+                        <outlet property="studentPicture" destination="pJ7-qS-gMw" id="APB-LS-ZoA"/>
+                        <outlet property="tutorPicture" destination="owa-OP-yzd" id="fcs-fN-uFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvK-Yv-7vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2643,6 +2670,6 @@
         <segue reference="H23-1a-bea"/>
         <segue reference="BqC-mZ-mge"/>
         <segue reference="52Z-tS-Izn"/>
-        <segue reference="24s-JY-mtb"/>
+        <segue reference="ARa-b6-atW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -74,7 +74,7 @@
         NSString *tempTime = [startTime stringByAppendingString:@"-"];
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
         self.confirmTutorTime.text = finalTime;
-        //self.confirmTutorTime.text = [result objectForKey:@"time"];
+        self.tutorID = [result objectForKey:@"tutorID"];
         self.confirmTutorLocation = [result objectForKey:@"location"];
         
         NSLog(@"first: %@", self.confirmTutorFirst.text);
@@ -88,13 +88,14 @@
                                                       FBSessionState status,
                                                       NSError *fbError) {
                                   }];
-    
+  
     
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
         NSLog(@"%@", [result objectForKey:@"id"]);
         
         
         self.studentPicture.profileID = self.facebookID;
+        self.tutorPicture.profileID = self.tutorID;
         
         
     }];

@@ -7,6 +7,7 @@
 //
 
 #import "StudentApptDetailsViewController.h"
+#import "ReviewTutorViewController.h"
 
 @interface StudentApptDetailsViewController ()
 
@@ -68,7 +69,7 @@
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
         self.studentDetailsTime.text = finalTime;
         self.studentDetailsLocation.text = [result objectForKey:@"location"];
-        //[self.apptIDArray addObject:apptID];
+        //self.apptIDArray addObject:apptID;
         
         NSLog(@"first: %@", self.studentDetailsFirst.text);
     }
@@ -89,4 +90,15 @@
 }
 */
 
+- (IBAction)review:(id)sender {
+    ReviewTutorViewController *RTVC = [[ReviewTutorViewController alloc]init];
+    // Perform segue to candy detail
+    
+    RTVC.apptID = self.apptID;
+    NSLog(@"IDArray %@", RTVC.apptID);
+    
+    
+    
+    [self performSegueWithIdentifier:@"tutorReview" sender:self];
+}
 @end

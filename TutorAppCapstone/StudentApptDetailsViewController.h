@@ -19,5 +19,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *studentDetailsTime;
 
 @property (weak, nonatomic)IBOutlet NSMutableArray *apptID;
+- (IBAction)review:(id)sender;
 
 @end

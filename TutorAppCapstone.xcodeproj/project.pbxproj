@@ -22,6 +22,7 @@
 		26E927761ACB180500F09B88 /* UpdateTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E927751ACB180500F09B88 /* UpdateTutorViewController.m */; };
 		26E9277F1ACB245100F09B88 /* StudentUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E9277E1ACB245100F09B88 /* StudentUpdateViewController.m */; };
 		26E927821ACB25E800F09B88 /* TutorUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E927811ACB25E800F09B88 /* TutorUpdateViewController.m */; };
+		26E927851ACB29CC00F09B88 /* ReviewTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E927841ACB29CC00F09B88 /* ReviewTutorViewController.m */; };
 		B44E15E61AC47B4200D67D1D /* TutorConfirmedApptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */; };
 		B4617C4E1A7AECA9001D2818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C4D1A7AECA9001D2818 /* main.m */; };
 		B4617C511A7AECA9001D2818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4617C501A7AECA9001D2818 /* AppDelegate.m */; };
@@ -74,6 +75,8 @@
 		26E9277E1ACB245100F09B88 /* StudentUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentUpdateViewController.m; sourceTree = "<group>"; };
 		26E927801ACB25E800F09B88 /* TutorUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorUpdateViewController.h; sourceTree = "<group>"; };
 		26E927811ACB25E800F09B88 /* TutorUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorUpdateViewController.m; sourceTree = "<group>"; };
+		26E927831ACB29CC00F09B88 /* ReviewTutorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTutorViewController.h; sourceTree = "<group>"; };
+		26E927841ACB29CC00F09B88 /* ReviewTutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTutorViewController.m; sourceTree = "<group>"; };
 		B44E15E41AC47B4200D67D1D /* TutorConfirmedApptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorConfirmedApptsViewController.h; sourceTree = "<group>"; };
 		B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorConfirmedApptsViewController.m; sourceTree = "<group>"; };
 		B4617C481A7AECA9001D2818 /* TutorAppCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutorAppCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,8 @@
 				B481FD601AB0E4360013471C /* LoadingViewController.m */,
 				B4CEA16E1AC1FAE7004133D3 /* ConfirmApptViewController.h */,
 				B4CEA16F1AC1FAE7004133D3 /* ConfirmApptViewController.m */,
+				26E927831ACB29CC00F09B88 /* ReviewTutorViewController.h */,
+				26E927841ACB29CC00F09B88 /* ReviewTutorViewController.m */,
 				071B357D1AC0CBC30090D40F /* Main.storyboard */,
 				B44E15E41AC47B4200D67D1D /* TutorConfirmedApptsViewController.h */,
 				B44E15E51AC47B4200D67D1D /* TutorConfirmedApptsViewController.m */,
@@ -358,6 +363,7 @@
 				B49B47091A8D4F1400A11413 /* StudentHomeViewController.m in Sources */,
 				B49B47121A8D503200A11413 /* StudentCreateViewController.m in Sources */,
 				B4F1F07F1AC9E5AC006EE283 /* StudentViewAllViewController.m in Sources */,
+				26E927851ACB29CC00F09B88 /* ReviewTutorViewController.m in Sources */,
 				B4617C541A7AECA9001D2818 /* LogInViewController.m in Sources */,
 				B4CEA1701AC1FAE7004133D3 /* ConfirmApptViewController.m in Sources */,
 				0795B5ED1AC1ECAE00D6509E /* AddAvailabilityViewController.m in Sources */,
