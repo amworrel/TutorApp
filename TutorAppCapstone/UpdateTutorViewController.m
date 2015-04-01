@@ -36,7 +36,7 @@
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_viewall_appts.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/update_tutor_info.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         

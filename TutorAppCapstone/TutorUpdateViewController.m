@@ -43,7 +43,7 @@
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_viewall_appts.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/tutor_update_info.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         
@@ -129,13 +129,13 @@
         
         
         
-        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&tutorUpdateFirst=%@&tutorUpdateLast=%@&tutorUpdateUniversity=%@&tutorUpdateYear=%@&tutorUpdateMajor=%@&tutorUpdateCode=%@&tutorUpdateCourseID=%@", self.facebookID.self, [self.updateTutorFirst text], [self.updateTutorLast text], [self.updateTutorUniversity text], [self.updateTutorYear text], [self.updateTutorMajor text], [self.updateTutorCourseCode text], [self.updateTutorCourseID text]];
+        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&fname=%@&lname=%@&university=%@&year=%@&major=%@&courseCode=%@&courseID=%@", self.facebookID.self, [self.updateTutorFirst text], [self.updateTutorLast text], [self.updateTutorUniversity text], [self.updateTutorYear text], [self.updateTutorMajor text], [self.updateTutorCourseCode text], [self.updateTutorCourseID text]];
         
         
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_viewall_appts.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/tutor_update.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         
@@ -169,5 +169,9 @@
         
     }];
 
+}
+
+- (IBAction)backgroundStudentTap:(id)sender {
+    [self.view endEditing:YES];
 }
 @end
