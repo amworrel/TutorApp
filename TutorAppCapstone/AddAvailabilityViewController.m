@@ -38,6 +38,10 @@
 
 
 
+- (IBAction)backgroundTap:(id)sender {
+     [self.view endEditing:YES];
+}
+
 - (IBAction)addAppt:(id)sender {
     
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"picture", nil];

@@ -11,7 +11,7 @@
 
 @interface ReviewTutorViewController : UIViewController
 
-@property (weak, nonatomic)IBOutlet NSString *apptID;
+@property (weak, nonatomic)IBOutlet NSMutableArray *apptID;
 @property (weak, nonatomic)IBOutlet NSString *facebookID;
 @property (weak, nonatomic) IBOutlet UILabel *reviewTutorFirst;
 @property (weak, nonatomic) IBOutlet UILabel *reviewTutorLast;
@@ -23,5 +23,6 @@
 @property (weak, nonatomic) IBOutlet NSString *tutorID;
 - (IBAction)submitReview:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *reviewText;
+- (IBAction)backgroundTap:(id)sender;
 
 @end

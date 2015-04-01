@@ -24,6 +24,8 @@
     self.dateArray = [[NSMutableArray alloc] init];
     self.timeArray = [[NSMutableArray alloc] init];
     self.apptIDArray = [[NSMutableArray alloc] init];
+    self.nameArray = [[NSMutableArray alloc] init];
+    self.reviewArray = [[NSMutableArray alloc] init];
     
     
     NSLog(@"ID: %@", self.tutorID);
@@ -166,11 +168,74 @@
         [self.apptIDArray addObject:apptID];
        
     }
+    //REVIEWS
+    
+
+
+    
+    NSLog(@"PostData: %@", post);
+    
+    NSURL *reviewUrl =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/viewall_reviews.php"];
+    
+    NSData *reviewPostData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *reviewPostLength = [NSString stringWithFormat:@"%lu", (unsigned long)[reviewPostData length]];
+    
+    NSMutableURLRequest *reviewRequest = [[NSMutableURLRequest alloc] init];
+    [reviewRequest setURL:reviewUrl];
+    [reviewRequest setHTTPMethod:@"POST"];
+    [reviewRequest setValue:reviewPostLength forHTTPHeaderField:@"Content-Length"];
+    [reviewRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [reviewRequest setHTTPBody:reviewPostData];
+    
+    NSLog(@"URLRequest: %@", reviewRequest);
+    
+    NSError *reviewError = [[NSError alloc] init];
+    NSHTTPURLResponse *reviewResponse = nil;
+    NSData *reviewUrlData=[NSURLConnection sendSynchronousRequest:reviewRequest returningResponse:&reviewResponse error:&reviewError];
+    
+    NSLog(@"Response code: %ld", (long)[reviewResponse statusCode]);
+    
+    NSString *reviewStringData = [[NSString alloc]initWithData:reviewUrlData encoding:NSUTF8StringEncoding];
+    NSLog(@"StringResponse ==> %@", reviewStringData);
+    
+    NSMutableData *reviewResponseData = [[NSMutableData alloc] initWithData:reviewUrlData];
+    NSLog(@"Response ==> %@", reviewResponseData);
+    
+    NSDictionary *reviewJsonData = [NSJSONSerialization
+                              JSONObjectWithData:reviewResponseData
+                              options:NSJSONReadingMutableLeaves
+                              error:&reviewError];
+    
+    
+    
+    NSArray *reviewResults = [reviewJsonData valueForKeyPath:@"resultArray"];
+    NSLog(@"Results %@", reviewResults);
+    
+    for (NSDictionary *reviewResult in reviewJsonData) {
+        NSString *studentFirst = [reviewResult objectForKey:@"fname"];
+        NSString *studentLast = [reviewResult objectForKey:@"lname"];
+        NSString *review = [reviewResult objectForKey:@"eval"];
+        NSString *tempName = [studentFirst stringByAppendingString:@" "];
+        NSString *fullName = [tempName stringByAppendingString:studentLast];
+        [self.nameArray addObject: fullName];
+        [self.reviewArray addObject:review];
+    }
+
+    
 }
     
     -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        return [self.dateArray count];
-        return [self.timeArray count];
+        if (tableView == self.tableView) {
+            return [self.dateArray count];
+            return [self.timeArray count];
+        }
+        if (tableView == self.reviewTable) {
+        return [self.reviewArray count];
+        }
+        else {
+            return [self.nameArray count];
+        }
     }
     
     -(UITableViewCell *)tableView:(UITableView *) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -185,10 +250,16 @@
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SimpleIdentifier];
         }
-        
+        if (tableView == self.tableView) {
+        [[cell textLabel] setLineBreakMode:UILineBreakModeWordWrap];
         cell.textLabel.text = self.dateArray[indexPath.row];
         cell.detailTextLabel.text = self.timeArray[indexPath.row];
-        
+        }
+        else if (tableView == self.reviewTable){
+            cell.textLabel.text = self.nameArray[indexPath.row];
+            cell.detailTextLabel.text = self.reviewArray[indexPath.row];
+            cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        }
         
         return cell;
         
@@ -215,10 +286,37 @@
             ConfirmApptViewController *destViewController = segue.destinationViewController;
             destViewController.apptID = self.apptIDArray[indexPath.row];
         }
- 
-
     }
-
+//
+//    -(NSInteger)reviewTable:(UITableView *)reviewTable numberOfRowsInSection:(NSInteger)section {
+//            return [self.nameArray count];
+//            return [self.reviewArray count];
+//        }
+//        
+//    -(UITableViewCell *)reviewTable:(UITableView *) reviewTable cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//            
+//            NSString *SimpleIdentifier = @"ReviewIdentifier";
+//            
+//            UITableViewCell *cell = [reviewTable dequeueReusableCellWithIdentifier:SimpleIdentifier];
+//            
+//            
+//            
+//            
+//            if (cell == nil) {
+//                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SimpleIdentifier];
+//            }
+//            
+//            cell.textLabel.text = self.nameArray[indexPath.row];
+//            cell.detailTextLabel.text = self.reviewArray[indexPath.row];
+//            
+//            
+//            return cell;
+//            
+//            
+//        }
+//
+//
+//
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

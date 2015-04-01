@@ -34,7 +34,7 @@
         
         
         self.facebookID = [result objectForKey:@"id"];
-        
+        self.picture.profileID = _facebookID;
         
         
         NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@", self.facebookID.self];
@@ -42,7 +42,7 @@
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_viewall_appts.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/student_update_info.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         
@@ -127,13 +127,13 @@
         
         
         
-        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&updateStudentFirst=%@&updateStudentLast=%@&updateStudentUniversity=%@&updateStudentYear=%@&updateStudentMajor=%@", self.facebookID.self, [self.updateStudentFirst text], [self.updateStudentLast text], [self.updateStudentUniversity text], [self.updateStudentYear text], [self.updateStudentMajor text]];
+        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@&fname=%@&lname=%@&university=%@&year=%@&major=%@", self.facebookID.self, [self.updateStudentFirst text], [self.updateStudentLast text], [self.updateStudentUniversity text], [self.updateStudentYear text], [self.updateStudentMajor text]];
         
         
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_viewall_appts.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/student_update.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         
@@ -167,5 +167,9 @@
         
     }];
 
+}
+
+- (IBAction)backgroundTap:(id)sender {
+     [self.view endEditing:YES];
 }
 @end

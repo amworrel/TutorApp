@@ -38,6 +38,7 @@
 
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 
+- (IBAction)backgroundTap:(id)sender;
 
 
 - (IBAction)addAppt:(id)sender;

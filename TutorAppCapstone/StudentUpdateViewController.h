@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface StudentUpdateViewController : UIViewController
 
@@ -19,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 
 - (IBAction)updateStudent:(id)sender;
+@property (weak, nonatomic) IBOutlet FBProfilePictureView *picture;
 
+
+- (IBAction)backgroundTap:(id)sender;
 
 @end

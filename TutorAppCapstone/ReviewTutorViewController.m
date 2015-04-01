@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"apptID: %@", self.apptID.self);
+    
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
@@ -43,12 +45,12 @@
         NSInteger success = 0;
         
         
-        NSString *post = [[NSString alloc] initWithFormat:@"acctID=%@", self.facebookID.self];
+        NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@", self.apptID.self];
         
         
         NSLog(@"PostData: %@", post);
         
-        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_home.php"];
+        NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_review_details.php"];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         
@@ -88,7 +90,7 @@
         for (NSDictionary *result in jsonData) {
             self.reviewTutorFirst.text = [result objectForKey:@"fname"];
             self.reviewTutorLast.text = [result objectForKey:@"lname"];
-            self.tutorID = [result objectForKey:@"tutorID"];
+            self.tutorID = [result objectForKey:@"tutorAcctID"];
             
             NSLog(@"first: %@", self.reviewTutorFirst.text);
         }
@@ -115,12 +117,12 @@
 */
 
 - (IBAction)submitReview:(id)sender {
-    NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@&reviewText=%@", self.apptID.self, [self.reviewText text]];
+    NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@&reviewText=%@&tutorAcctID=%@", self.apptID.self, [self.reviewText text], self.tutorID.self];
     
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_student_home.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/insert_review.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -153,5 +155,8 @@
                               error:&error];
     
 
+}
+- (IBAction)backgroundTap:(id)sender {
+     [self.view endEditing:YES];
 }
 @end

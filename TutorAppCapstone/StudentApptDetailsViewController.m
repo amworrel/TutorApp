@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.apptIDArray = [[NSMutableArray alloc] init];
     
     NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@", self.apptID.self];
     
@@ -67,12 +68,32 @@
         NSString *endTime= [result objectForKey:@"endTime"];
         NSString *tempTime = [startTime stringByAppendingString:@"-"];
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
+        self.tutorID = [result objectForKey:@"tutorAcctID"];
         self.studentDetailsTime.text = finalTime;
         self.studentDetailsLocation.text = [result objectForKey:@"location"];
-        //self.apptIDArray addObject:apptID;
+        [self.apptIDArray addObject:apptID];
         
-        NSLog(@"first: %@", self.studentDetailsFirst.text);
+        NSLog(@"first: %@", self.tutorID);
     }
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        
+        
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.studentPicture.profileID = _facebookID;
+        self.tutorPicture.profileID = _tutorID;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,6 +120,14 @@
     
     
     
+    
     [self performSegueWithIdentifier:@"tutorReview" sender:self];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"tutorReview"]) {
+      
+        ReviewTutorViewController *destViewController = segue.destinationViewController;
+        destViewController.apptID = self.apptIDArray;
+    }
 }
 @end

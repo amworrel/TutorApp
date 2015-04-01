@@ -90,7 +90,7 @@
             NSString *startTime = [result objectForKey:@"startTime"];
             NSString *endTime = [result objectForKey:@"endTime"];
             NSString *apptID = [result objectForKey:@"apptID"];
-            
+    
             NSString *tempTime = [startTime stringByAppendingString:@"-"];
             NSString *wholeTime = [tempTime stringByAppendingString:endTime];
             [self.timeArray addObject:wholeTime];

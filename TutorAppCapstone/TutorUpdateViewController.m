@@ -171,7 +171,9 @@
 
 }
 
-- (IBAction)backgroundStudentTap:(id)sender {
-    [self.view endEditing:YES];
+- (IBAction)backgroundTap:(id)sender {
+     [self.view endEditing:YES];
 }
+
+
 @end

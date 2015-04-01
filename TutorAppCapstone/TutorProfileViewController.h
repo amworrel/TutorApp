@@ -35,7 +35,10 @@
 @property(strong, nonatomic)NSMutableArray *apptIDArray;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(strong, nonatomic)NSMutableArray *nameArray;
 
+@property(strong, nonatomic)NSMutableArray *reviewArray;
 
+@property (weak, nonatomic) IBOutlet UITableView *reviewTable;
 
 @end

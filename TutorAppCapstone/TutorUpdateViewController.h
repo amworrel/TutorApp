@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *updateTutorCourseID;
 @property (weak, nonatomic) IBOutlet NSString *facebookID;
 - (IBAction)updateTutor:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
 
 
 @end
