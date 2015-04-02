@@ -516,7 +516,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3c-RR-mz2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3.5" y="920.5"/>
+            <point key="canvasLocation" x="213.5" y="794.5"/>
         </scene>
         <!--Selection View Controller-->
         <scene sceneID="6n6-a3-9qJ">
@@ -2702,7 +2702,14 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Update Profile" id="xsb-Mf-TDx"/>
+                                    <navigationItem title="Update Profile" id="xsb-Mf-TDx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="GbP-oP-7cY">
+                                            <color key="tintColor" red="0.178750624" green="0.48450272570000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="djO-DV-8rc" kind="modal" id="GJh-re-shY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1IY-4A-hO3">
@@ -2833,7 +2840,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="CAM-Y4-VC6"/>
-        <segue reference="rf2-Pf-Kru"/>
+        <segue reference="Nz0-Z2-eZF"/>
         <segue reference="yrg-q3-u1W"/>
         <segue reference="o6v-UZ-Gqo"/>
         <segue reference="Brb-5W-cdl"/>
