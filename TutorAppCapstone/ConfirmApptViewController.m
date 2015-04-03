@@ -21,6 +21,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tutorIDArray = [[NSMutableArray alloc] init];
+    
+    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
+    
+    [FBSession openActiveSessionWithReadPermissions:permissions
+                                       allowLoginUI:YES
+                                  completionHandler:^(FBSession *session,
+                                                      FBSessionState status,
+                                                      NSError *fbError) {
+                                  }];
+    
+    
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
+        NSLog(@"%@", [result objectForKey:@"id"]);
+        self.facebookID = [result objectForKey:@"id"];
+        self.studentPicture.profileID = _facebookID;
+    
     NSLog(@"apptID: %@", self.apptID);
     NSString *post = [[NSString alloc] initWithFormat:@"selectedAppt=%@", self.apptID.self];
     
@@ -80,24 +96,10 @@
         self.confirmTutorLocation = [result objectForKey:@"location"];
         [self.tutorIDArray addObject:tutorID];
         
-        NSLog(@"first: %@", self.confirmTutorFirst.text);
+        NSLog(@"TutorID: %@", self.tutorID);
     }
     
-    NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
-    
-    [FBSession openActiveSessionWithReadPermissions:permissions
-                                       allowLoginUI:YES
-                                  completionHandler:^(FBSession *session,
-                                                      FBSessionState status,
-                                                      NSError *fbError) {
-                                  }];
-  
-    
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
-        NSLog(@"%@", [result objectForKey:@"id"]);
-        
-        
-        self.studentPicture.profileID = _facebookID;
+   
         self.tutorPicture.profileID = _tutorID;
         
         

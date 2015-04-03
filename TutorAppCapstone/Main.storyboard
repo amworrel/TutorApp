@@ -2099,7 +2099,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="StudentAppointmentView" id="Jfc-e2-5xq">
+                                    <navigationItem title="Student Appointment" id="Jfc-e2-5xq">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="Myq-FJ-YQm">
                                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -2832,15 +2832,15 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5Zz-ZP-BKg"/>
         <segue reference="o6v-UZ-Gqo"/>
-        <segue reference="GWx-Ys-yRc"/>
-        <segue reference="yrg-q3-u1W"/>
+        <segue reference="swj-vB-WQl"/>
+        <segue reference="s6K-3L-618"/>
+        <segue reference="v24-SP-a17"/>
+        <segue reference="5Zz-ZP-BKg"/>
         <segue reference="m0k-iJ-DY9"/>
         <segue reference="CAM-Y4-VC6"/>
         <segue reference="hhQ-z1-YwR"/>
+        <segue reference="yrg-q3-u1W"/>
         <segue reference="nV4-iP-TSm"/>
-        <segue reference="v24-SP-a17"/>
-        <segue reference="s6K-3L-618"/>
     </inferredMetricsTieBreakers>
 </document>
