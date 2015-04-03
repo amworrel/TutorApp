@@ -10,6 +10,7 @@
 #import "TutorProfileViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+
 @interface ConfirmApptViewController ()
 
 @end
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.tutorIDArray = [[NSMutableArray alloc] init];
     NSLog(@"apptID: %@", self.apptID);
     NSString *post = [[NSString alloc] initWithFormat:@"selectedAppt=%@", self.apptID.self];
     
@@ -74,8 +75,10 @@
         NSString *tempTime = [startTime stringByAppendingString:@"-"];
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
         self.confirmTutorTime.text = finalTime;
-        self.tutorID = [result objectForKey:@"tutorID"];
+        NSString *tutorID = [result objectForKey:@"tutorAcctID"];
+        self.tutorID = [result objectForKey:@"tutorAcctID"];
         self.confirmTutorLocation = [result objectForKey:@"location"];
+        [self.tutorIDArray addObject:tutorID];
         
         NSLog(@"first: %@", self.confirmTutorFirst.text);
     }
@@ -94,8 +97,8 @@
         NSLog(@"%@", [result objectForKey:@"id"]);
         
         
-        self.studentPicture.profileID = self.facebookID;
-        self.tutorPicture.profileID = self.tutorID;
+        self.studentPicture.profileID = _facebookID;
+        self.tutorPicture.profileID = _tutorID;
         
         
     }];
@@ -103,6 +106,13 @@
 
     
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"viewTutor"]) {
+        TutorProfileViewController *destViewController = segue.destinationViewController;
+        destViewController.tutorID = self.tutorIDArray[0];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

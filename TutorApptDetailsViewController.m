@@ -1,24 +1,24 @@
 //
-//  StudentApptDetailsViewController.m
+//  TutorApptDetailsViewController.m
 //  TutorAppCapstone
 //
-//  Created by Worrell, Amy Marie on 3/30/15.
+//  Created by Worrell, Amy Marie on 4/3/15.
 //  Copyright (c) 2015 Worrell, Amy Marie. All rights reserved.
 //
 
-#import "StudentApptDetailsViewController.h"
-#import "ReviewTutorViewController.h"
+#import "TutorApptDetailsViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface StudentApptDetailsViewController ()
+@interface TutorApptDetailsViewController ()
 
 @end
 
-@implementation StudentApptDetailsViewController
+@implementation TutorApptDetailsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.apptIDArray = [[NSMutableArray alloc] init];
+    
     NSArray *permissions = [[NSArray alloc] initWithObjects:@"first_name",@"last_name",@"user_location",@"email",@"basic_info",@"picture", nil];
     
     [FBSession openActiveSessionWithReadPermissions:permissions
@@ -31,16 +31,17 @@
     
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *fbError) {
         NSLog(@"%@", [result objectForKey:@"id"]);
-        self.facebookID = [result objectForKey:@"id"];
-        self.studentPicture.profileID = _facebookID;
         
-
-    NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@", self.apptID.self];
+        
+        
+        self.facebookID = [result objectForKey:@"id"];
+        self.tutorPicture.profileID = _facebookID;
+        NSString *post = [[NSString alloc] initWithFormat:@"apptID=%@", self.apptID.self];
     
     
     NSLog(@"PostData: %@", post);
     
-    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_appt_details_as_student.php"];
+    NSURL *url =[NSURL URLWithString:@"http://cgi.soic.indiana.edu/~team14/get_appt_details_as_tutor.php"];
     
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -73,29 +74,30 @@
                               error:&error];
     
     for (NSDictionary *result in jsonData) {
-        self.studentDetailsFirst.text = [result objectForKey:@"fname"];
-        self.studentDetailsLast.text = [result objectForKey:@"lname"];
-        self.studentDetailsDate.text = [result objectForKey:@"date"];
-        self.studentDetailsRate.text = [result objectForKey:@"rate"];
-        self.studentDetailsDetail.text=[result objectForKey:@"details"];
-        NSString *apptID = [result objectForKey:@"apptID"];
+        self.first.text = [result objectForKey:@"fname"];
+        self.last.text = [result objectForKey:@"lname"];
+        self.date.text = [result objectForKey:@"date"];
+        self.rate.text = [result objectForKey:@"rate"];
+        self.details.text=[result objectForKey:@"details"];
         NSString *startTime = [result objectForKey:@"startTime"];
         NSString *endTime= [result objectForKey:@"endTime"];
         NSString *tempTime = [startTime stringByAppendingString:@"-"];
         NSString *finalTime = [tempTime stringByAppendingString:endTime];
-        self.tutorID = [result objectForKey:@"tutorAcctID"];
-        self.studentDetailsTime.text = finalTime;
-        self.studentDetailsLocation.text = [result objectForKey:@"location"];
-        [self.apptIDArray addObject:apptID];
+        self.studentID = [result objectForKey:@"studAcctID"];
+        self.time.text = finalTime;
+        self.location.text = [result objectForKey:@"location"];
+       
         
-        NSLog(@"first: %@", self.tutorID);
+        
+        NSLog(@"first: %@", self.studentID);
     }
+        self.studentPicture.profileID = _studentID;
+
         
-        
-      
-        self.tutorPicture.profileID = _tutorID;
     }];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -112,23 +114,4 @@
 }
 */
 
-- (IBAction)review:(id)sender {
-    ReviewTutorViewController *RTVC = [[ReviewTutorViewController alloc]init];
-    // Perform segue to candy detail
-    
-    RTVC.apptID = self.apptID;
-    NSLog(@"IDArray %@", RTVC.apptID);
-    
-    
-    
-    
-    [self performSegueWithIdentifier:@"tutorReview" sender:self];
-}
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"tutorReview"]) {
-      
-        ReviewTutorViewController *destViewController = segue.destinationViewController;
-        destViewController.apptID = self.apptIDArray;
-    }
-}
 @end

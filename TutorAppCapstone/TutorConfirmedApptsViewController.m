@@ -8,6 +8,7 @@
 
 #import "TutorConfirmedApptsViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "TutorApptDetailsViewController.h"
 
 @interface TutorConfirmedApptsViewController ()
 
@@ -92,13 +93,13 @@
             NSString *date = [result objectForKey:@"date"];
             NSString *startTime = [result objectForKey:@"startTime"];
             NSString *endTime = [result objectForKey:@"endTime"];
-            //NSString *apptID = [result objectForKey:@"apptID"];
+            NSString *apptID = [result objectForKey:@"apptID"];
             
             NSString *tempTime = [startTime stringByAppendingString:@"-"];
             NSString *wholeTime = [tempTime stringByAppendingString:endTime];
             [self.timeArray addObject:wholeTime];
             [self.dateArray addObject:date];
-            //[self.apptIDArray addObject:apptID];
+            [self.apptIDArray addObject:apptID];
             
         }
         NSLog(@"dateArray: %@", self.dateArray);
@@ -133,6 +134,27 @@
     
     
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TutorApptDetailsViewController *TADVC = [[TutorApptDetailsViewController alloc]init];
+    // Perform segue to candy detail
+    
+    TADVC.apptID = self.apptIDArray[indexPath.row];
+    NSLog(@"IDArray %@", TADVC.apptID);
+    
+    
+    
+    [self performSegueWithIdentifier:@"apptDetails" sender:tableView];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"apptDetails"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TutorApptDetailsViewController *destViewController = segue.destinationViewController;
+        destViewController.apptID = self.apptIDArray[indexPath.row];
+    }
+}
+
 
     
 -(void)viewDidAppear:(BOOL)animated {

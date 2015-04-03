@@ -9,6 +9,7 @@
 #import "TutorHomeViewController.h"
 #import "UpdateAvailabilityViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "TutorApptDetailsViewController.h"
 
 
 
@@ -217,6 +218,28 @@
     
     
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TutorApptDetailsViewController *TADVC = [[TutorApptDetailsViewController alloc]init];
+    // Perform segue to candy detail
+    
+    TADVC.apptID = self.apptIDArray[indexPath.row];
+    NSLog(@"IDArray %@", TADVC.apptID);
+    
+    
+    
+    [self performSegueWithIdentifier:@"apptDetails" sender:tableView];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"apptDetails"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TutorApptDetailsViewController *destViewController = segue.destinationViewController;
+        destViewController.apptID = self.apptIDArray[indexPath.row];
+    }
+}
+
+
 
 
 

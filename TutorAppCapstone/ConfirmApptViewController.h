@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *confirmTutorDetails;
 @property (weak, nonatomic) IBOutlet UILabel *confirmTutorTime;
 @property(weak, nonatomic) IBOutlet NSString *facebookID;
+@property (strong, nonatomic)IBOutlet NSMutableArray *tutorIDArray;
 @property (weak, nonatomic)IBOutlet NSString *tutorID;
 
 - (IBAction)sendStudentID:(id)sender;
